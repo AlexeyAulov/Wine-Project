@@ -1,0 +1,166 @@
+           
+          
+           
+           
+           body{background-color:grey;}
+           
+           /*Alex'sPortfolio.php*/
+           
+                .bigger-image {
+                  margin: 0;
+                  font-family: "Roboto", sans-serif;
+                  overflow-x: hidden;
+                }
+
+                .big-image {
+                  height: 100vh;
+                  width: 100vw;
+                  position: relative;
+                  background-size: cover;
+                  background-position: 50% 50%;
+                  background-image: url(../Pictures/Pic.jpg);
+                }
+
+                .overlay {
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  top: 0;
+                  left: 0;
+                  background: rgba(0, 0, 0, 0.35);
+                  color: white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                }
+
+                .overlay h1 {
+                  font-size: 65px;
+                  letter-spacing: 0px;
+                  margin: 0 0 5px;
+                
+                
+                }
+
+              ul li
+              {
+              list-style:none;
+              text-align:center;
+            }
+        
+            
+            
+            
+            
+            
+            /*Aboutme.php css*/
+            .bigger_imagefour {
+                margin: 0;
+                font-family: "Roboto", sans-serif;
+                overflow-x: hidden;
+              }
+              
+              .big_imagefour {
+               height: 100vh;
+                width: 100vw;
+                position: relative;
+                background-size: cover;
+                background-position: 50% 50%;
+                background-image: url(../Pictures/vibe.jpg);
+              }
+  
+              .overlayfour{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.45);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+              }
+  
+              .overlayfour h1 {
+                font-size: 65px;
+                letter-spacing: 0px;
+                margin: 0 0 5px;
+              
+              
+              }
+  
+            ul li
+            {
+            list-style:none;
+            text-align:center;
+            }
+
+            /*FinalProject.php*/
+            .FinalImage {
+                height: 100vh;
+                width: 100vw;
+                position: relative;
+                background-size: cover;
+                background-position: 50% 50%;
+                background-image:url(../Pictures/ComingSoon.jpg);
+              }
+              /*Lab1a.php*/
+              .list-group-item.scrollspy-example
+              {
+              padding: 10px 20px ;
+
+
+              }
+              .scrollspy-example
+              {
+                  padding: 10px 20px 30px 20px ;
+              
+              border-style:solid;
+
+              border-width:thin;
+              }
+              .list-item
+              {
+
+                  border-style:solid;
+                  border-width:thin; 
+              border-radius:10px;
+              padding: 10px 20px 30px 20px;
+
+              }
+              
+              .WelcomeImage{
+                height: 100vh;
+                width: 100vw;
+                position: relative;
+                background-size: cover;
+                background-position: 50% 50%;
+                background-image:url(../Pictures/cottonbro.jpg);
+              }
+
+
+
+
+
+
+              .my-container{
+	margin-top: 30px;
+	border: 1px solid green;
+}
+
+.my-row{
+	border: 3px solid red;
+	height: 300px;
+}
+
+.my-col{
+	border: 3px dotted blue;
+}
+
+.main-form{
+	width: 500px;
+	margin: auto;
+}

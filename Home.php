@@ -15,7 +15,7 @@
 					<nav>
 						
 							<ul>
-								<!-- this is a test-->
+								<!-- this is a test2-->
 								<li><a href="#">Home</a></li>
 								<li><a href="#">Portfolio</a></li>
 								<li><a href="#">About Me</a></li>

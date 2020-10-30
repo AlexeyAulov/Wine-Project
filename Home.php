@@ -1,7 +1,7 @@
 <!doctype html>
 	<html lang="en">
 	<head>
-	<link href = "..css\Cool.css" rel="stylesheet" type="text/css">
+	<link href = "CSS\Cool.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
 	<title>Alex's Projects</title>	
 	</head>
@@ -10,15 +10,15 @@
 		<header>
 		
 			<div class="container">
-			<img src="Pictures/CountryWearThree.png" alt="logo" class="logo">
+			<img src="Pic/CountryWearThree.png" alt="logo" class="logo">
 				
 					<nav>
 						
 							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Portfolio</a></li>
-								<li><a href="#">About Me</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="#"></a>Home</li>
+								<li><a href="#"></a>Catalog</li>
+								<li><a href="#"></a>Log In</li>
+								<li><a href="#"></a>About</a></li>
 							</ul>
 					</nav>
 			</div>

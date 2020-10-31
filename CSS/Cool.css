@@ -53,7 +53,7 @@ nav a {
   color:cornsilk;
   text-decoration: none;
   text-transform: none;
-  font-size: 19px;
+  font-size: 21px;
 }
 
 nav a:hover {
@@ -87,7 +87,7 @@ nav input[type=text]
     margin-bottom:10px;
     margin-right:60px;
     font-size:17px;
-    border-radius:5px;
+    border-radius:3px;
     outline:none;
    
 }

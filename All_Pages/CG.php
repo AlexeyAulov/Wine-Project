@@ -7,7 +7,8 @@
 	</head>
 	<body>
 
-		<header>
+	<!--Start of Header-->	
+	<header>
 		
         <div class="logo">
             <img src="..\Pic\WinePic.png"></img>
@@ -27,6 +28,8 @@
 		</div>
   </header>
   
+<!--End of header-->
+
   <div id="container_two">
 	
 	<div id="main">
@@ -35,12 +38,15 @@
   
   </div>
 
-  
-  
-  <footer id="footer">  
- 	<a href="mailto:hege@example.com"><u>Contact Us</u></a>
-
-   
-  </footer> 
-	</body>
+  <!--Start of footer-->
+ 
+  <footer id="footer">   
+  <a href="../All_Pages/AU.php"><u>Contact Us </u></a>
+  <br>	
+  <a href="../All_Pages/AU.php"><u>About Us</u></a>
+  <br>	
+  <h6>Copyright © 2020 Alex Aulov. All rights reserved.</h6>
+ </footer> 
+  <!--End of footer-->
+</body>
 </html>

@@ -1,3 +1,4 @@
+<!---->
 <!doctype html>
 	<html lang="en">
 	<head>
@@ -7,7 +8,8 @@
 	</head>
 	<body>
 
-		<header>
+<!--Start of footer-->
+	<header>
 		
         <div class="logo">
             <img src="..\Pic\WinePic.png"></img>
@@ -26,19 +28,34 @@
 		</nav>
 		</div>
   </header>
+  <!--End of header-->
+
+
+
   <div id="container_two">
 	
 	<div id="main">
 	
+
+	
+
 	</div>
   
   </div>
 
   
-  
+  <!--Start of footer-->
+
   <footer id="footer"> 
   <a href="mailto:hege@example.com"><u>Contact Us</u></a>
-
+  <br> 
+  <a href="../All_Pages/AU.php"><u>About Us</u></a>
+  <br>	
+  <h6>Copyright © 2020 Alex Aulov. All rights reserved.</h6> 
   </footer> 
-	</body>
+
+<!--End of footer-->
+
+</body>
+
 </html>

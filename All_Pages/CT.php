@@ -5,8 +5,10 @@
 	<meta charset="utf-8">
 	<title>Alex's Projects</title>	
 	</head>
+	
 	<body>
-
+	
+	<!--Start of header-->
 		<header>
 		
         <div class="logo">
@@ -26,6 +28,8 @@
 		</nav>
 		</div>
   </header>
+<!--End of Header-->
+  
   <div id="container_two">
 	
 	<div id="main">
@@ -35,14 +39,14 @@
   </div>
 
   
-  
+  <!--Start of Footer-->
   <footer id="footer"> 
- 
- 
-  
-  <a href="mailto:hege@example.com"><u>Contact Us</u></a>
-
-
+  <a href="../All_Pages/AU.php"><u>Contact Us</u></a>
+  <br> 
+  <a href="../All_Pages/AU.php"><u>About Us</u></a>
+  <br>	
+  <h6>Copyright © 2020 Alex Aulov. All rights reserved.</h6>
   </footer> 
+  <!--End of Footer-->
 	</body>
 </html>

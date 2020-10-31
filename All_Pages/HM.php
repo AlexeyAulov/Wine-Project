@@ -37,10 +37,11 @@
   
   
   <footer id="footer"> 
- 
-  
-  <a href="mailto:hege@example.com"><u>Contact Us</u></a>
-
+  <a href="../All_Pages/AU.php"><u>Contact Us</u></a>
+  <br> 
+  <a href="../All_Pages/AU.php"><u>About Us</u></a>
+  <br>	
+  <h6>Copyright © 2020 Alex Aulov. All rights reserved.</h6>
   </footer> 
 	</body>
 </html>

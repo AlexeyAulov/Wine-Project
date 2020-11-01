@@ -10,23 +10,8 @@ height:100%;
 	background:cornsilk;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 800;
-  overflow: hidden;
 }
 
-.banner1{
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-img{
-  width 120%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .container {
 	width: 80%;

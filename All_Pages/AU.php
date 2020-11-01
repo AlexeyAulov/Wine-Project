@@ -8,7 +8,7 @@
 	</head>
 	<body>
 
-<!--Start of footer-->
+<!--Start of header-->
 	<header>
 		
         <div class="logo">
@@ -37,7 +37,10 @@
 	<div id="main">
 	
 
-	
+		<div class="banner1">
+			<img src="..\Pic\wineglass.jpg">
+		</div>
+
 
 	</div>
   

@@ -37,9 +37,8 @@
 	<div id="main">
 	
 
-		<div class="banner1">
-			<img src="..\Pic\wineglass.jpg">
-		</div>
+		
+		
 
 
 	</div>

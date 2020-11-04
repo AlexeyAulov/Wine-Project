@@ -56,8 +56,37 @@
 
 
 
-    <h1>Hello, world!</h1>
-
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Charge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    
+      <td>Peter</td>
+      <td>Parker</td>
+      <th scope="row">2</th>
+      <td>$20,000</td>
+    </tr>
+    <tr>
+    <td>Victor</td>
+      <td>Von Doom</td>
+      <th scope="row">3</th>
+      <td>$200</td>
+    </tr>
+    <tr>
+    <td>Marry</td>
+      <td>Jane</td>
+      <th scope="row">15</th>
+      <td>$9,999,999,999</td>
+      </tr>
+  </tbody>
+</table>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

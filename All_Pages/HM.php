@@ -52,11 +52,10 @@
     
   <div class="jumbotron jumbotron-fluid">
         <div class="container flex">
+          
           <h1 class="display-4 text-white text-center">Wine Lovers</h1>
           <p class="lead text-white text-center ">The best wine will be delivered to you</p>
-          <div class="alert alert-success text-center" role="alert">
-        Live Passionately. Drink Responsibly.<a href="#" class="alert-link">  Are you of legal drinking Age?</a>
-      </div>
+          
         </div> 
       </div>
 
@@ -66,27 +65,28 @@
 
     <div class="card-group">
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P1.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white ">ROSE</h5>
+      <p class="card-text text-white "></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P2.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white ">CHIANTI</h5>
+      <p class="card-text text-white"></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P3.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white">PINOT NOIR</h5>
+      <p class="card-text text-white"></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      
     </div>
   </div>
 </div>
@@ -95,27 +95,28 @@
     <div class="carousel-item">
     <div class="card-group">
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P4.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white">CABERNET SAUVIGNON</h5>
+      <p class="card-text text-white"></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P5.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white">MOET CHANDON</h5>
+      <p class="card-text text-white"></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P6.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white">Amarone</h5>
+      <p class="card-text text-white"></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+
     </div>
   </div>
 </div>
@@ -123,27 +124,27 @@
     <div class="carousel-item">
     <div class="card-group">
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P7.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white">SHIRAZ</h5>
+      <p class="card-text text-white"></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P8.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white">BARBARESCO</h5>
+      <p class="card-text text-white"></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <img src="../Pic/P9.JPG" class="card-img-top" alt="...">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white">SANTA MARGARITA</h5>
+      <p class="card-text text-white"></p>
+      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
     </div>
   </div>
 </div>

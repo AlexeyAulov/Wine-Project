@@ -5,3 +5,14 @@
   margin-top: 0mm;
   margin-bottom: 1mm;
 }
+.navbar-nav a{
+  color: #5bc0de !important;
+}
+.dropdown-menu a{
+  color: #5bc0de !important;
+}
+
+.navbar-brand
+{
+color:  #5bc0de !important;
+}

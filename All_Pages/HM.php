@@ -69,7 +69,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white ">ROSE</h5>
       <p class="card-text text-white "></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
     </div>
   </div>
   <div class="card">
@@ -77,7 +77,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white ">CHIANTI</h5>
       <p class="card-text text-white"></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
     </div>
   </div>
   <div class="card">
@@ -85,7 +85,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white">PINOT NOIR</h5>
       <p class="card-text text-white"></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
       
     </div>
   </div>
@@ -99,7 +99,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white">CABERNET SAUVIGNON</h5>
       <p class="card-text text-white"></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
     </div>
   </div>
   <div class="card">
@@ -107,7 +107,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white">MOET CHANDON</h5>
       <p class="card-text text-white"></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
     </div>
   </div>
   <div class="card">
@@ -115,7 +115,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white">Amarone</h5>
       <p class="card-text text-white"></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
 
     </div>
   </div>
@@ -128,7 +128,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white">SHIRAZ</h5>
       <p class="card-text text-white"></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
     </div>
   </div>
   <div class="card">
@@ -136,7 +136,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white">BARBARESCO</h5>
       <p class="card-text text-white"></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
     </div>
   </div>
   <div class="card">
@@ -144,7 +144,7 @@
     <div class="card-body bg-dark">
       <h5 class="card-title text-white">SANTA MARGARITA</h5>
       <p class="card-text text-white"></p>
-      <a href="cart.html" class="btn btn-secondary">Add to cart</a>
+      <a href="cart.html" class="btn btn-outline-info">Add to cart</a>
     </div>
   </div>
 </div>

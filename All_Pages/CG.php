@@ -33,9 +33,9 @@
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Sign up</a>
+          <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
           <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="#">Log in</a>
+		  <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign in</a>
           <a class="dropdown-item" href="#">Sign out</a>
         </div>
       </li>

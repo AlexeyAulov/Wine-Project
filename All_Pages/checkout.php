@@ -34,9 +34,9 @@
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Sign up</a>
+          <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
           <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="#">Log in</a>
+		  <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign in</a>
           <a class="dropdown-item" href="#">Sign out</a>
         </div>
       </li>
@@ -51,6 +51,7 @@
   
   </header>
           
+        <br>
         <form method="post" class="needs-validation" novalidate>
             <div class="container m-auto">
                 <h3 class="text-center text-dark ">Where should we send your order?</h3>
@@ -139,7 +140,7 @@
                 </div>
         </div>
     </div>
-           
+           <br>
         
 
           

@@ -33,9 +33,9 @@
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Sign up</a>
+          <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
           <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="#">Log in</a>
+		  <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign Up</a>
           <a class="dropdown-item" href="#">Sign out</a>
         </div>
       </li>
@@ -86,6 +86,9 @@
       </tr>
   </tbody>
 </table>
+<a href="../All_Pages/checkout.php" class="btn btn-outline-info">Checkout</a>
+   <br>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

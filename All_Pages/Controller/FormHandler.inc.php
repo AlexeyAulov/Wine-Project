@@ -1,5 +1,5 @@
 <?php
-   
+    
 
    $errors=[]; //because we have multiple error messages
 
@@ -36,8 +36,10 @@
 
         if(empty($password)){   //check if password is empty
           $errors['Pswd'] = 'Empty Password';
+        
         } else if(!preg_match($pattern, $password)){  //check the pattern of the password
           $errors['Pswd'] = 'Invalid Password';
+         
         }
 
 
@@ -58,12 +60,14 @@
                 foreach ($Data as $key => $val):
                   if($key !== $username){
                     $errors['Name'] = 'No matched record!';
+               
                   } else{
                     if($val !== $password){
                       $erros['Pswd'] = 'No matched record!';
+                     
                     } else{
-                      $success = "Matched Account";
-                      break;
+                      $success = "Matched Account"; 
+                    break;
                     }
                   }
                   

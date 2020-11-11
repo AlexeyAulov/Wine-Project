@@ -1,3 +1,6 @@
+<?php
+include("Controller/FormHandler.inc.php");
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -51,10 +54,8 @@
   
   </header>
 
-
-<body>
       
-<form action='Controller/FormHandler.php' method="POST" class="main-form needs-validation">
+<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST" class="main-form needs-validation">
               <div class="form-group">
               <label for="Username">Type Username (Email)</label>
               <input type="email" name="Name" id="Username" class="form-control" value=<?php echo $username??""; ?>>
@@ -89,6 +90,7 @@
              <div class="alert alert-danger">
              
              <?php
+             
              echo $errors['Pswd'];
               ?>
              

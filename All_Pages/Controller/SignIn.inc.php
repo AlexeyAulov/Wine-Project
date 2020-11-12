@@ -66,8 +66,21 @@
                       $erros['Pswd'] = 'No matched record!';
                      
                     } else{
-                      $success = "Matched Account"; 
-                    break;
+                    if(array_key_exists($username,$Data))
+                    {
+                    if($password === $Data[$username])
+                    {
+                      session_start();
+                     $_SESSION['Name']= $username;
+                     //var_dump($_SESSION);
+                     header("Location:../All_Pages/CG.php");
+                     exit();  
+                     
+                    }
+                   
+                    }
+                      //  $success = "Matched Account"; 
+                    //break;
                     }
                   }
                   
@@ -92,5 +105,6 @@
           endif;
      
     endif; 
+   
    
   ?>

@@ -1,5 +1,5 @@
 <?php
-include("Controller/FormHandler.inc.php");
+include("Controller/SignIn.inc.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,19 +32,8 @@ include("Controller/FormHandler.inc.php");
 	  <li class="nav-item ">
         <a class="nav-link" href="../All_Pages/AU.php">About us <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="../All_Pages/LISU.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Account
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
-          <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign in</a>
-          <a class="dropdown-item" href="#">Sign out</a>
-        </div>
-      </li>
       
-    </ul>
+      </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
@@ -63,6 +52,7 @@ include("Controller/FormHandler.inc.php");
               <label for="password">Type Password</label>
               <input type="password" name="Pswd" id="Password" class="form-control" value=<?php echo $password??""; ?>>
              
+      
                    <!--ONE BEG-->
           <?php
              if(isset($errors['Name'])): 

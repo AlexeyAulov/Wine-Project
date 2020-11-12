@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -35,8 +37,8 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
           <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign in</a>
-          <a class="dropdown-item" href="#">Sign out</a>
+		  <a class="dropdown-item" href="../All_Pages/Signin.php">Sign In</a>
+          <a class="dropdown-item" href="Controller/SignOut.inc.php">Sign out</a>
         </div>
       </li>
       
@@ -50,7 +52,9 @@
   
   </header>
     <br>
-	<div class="card-deck">
+
+    
+    <div class="card-deck">
       <div class="card bg-secondary text-white">
         <img src="../Pic/Wine_CG_1.jpg" class="card-img-top" alt="...">
         <div class="card-body">

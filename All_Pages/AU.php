@@ -36,8 +36,8 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
           <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign in</a>
-          <a class="dropdown-item" href="#">Sign out</a>
+		  <a class="dropdown-item" href="../All_Pages/Signin.php">Sign In</a>
+          <a class="dropdown-item" href="Controller/SignOut.inc.php">Sign out</a>
         </div>
       </li>
       

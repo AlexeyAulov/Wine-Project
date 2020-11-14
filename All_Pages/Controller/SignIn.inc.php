@@ -1,21 +1,28 @@
 <?php
-    include_once"Includes/dbconnect.inc.php";
+    include_once "Includes/dbconnect.inc.php";
+ 
+    $query1="SELECT * FROM CUSTOMER WHERE EMAIL=? AND PASSWORD=? ";
+   
+    $stmt=$conn->prepare($query1);
 
-   $errors=[]; //because we have multiple error messages
-
+    $stmt->bind_param("ss",$email,$password);
+    $stmt->execute();
     
-    $Data = array(
-      "WillSmith@gmail.com"=>"Prince1",
-      "BruceLee@outlook.com"=> "Likewater2",
-      "JeffyJeff@hotmail.com"=>"Jeff3",
-      );
-      
+    $result=$stmt->get_result();
+    if( $result->num_rows===0) exit('No rows');
+   
+    
+
+   
+//$stmt->close();
+
+    $errors=[]; //because we have multiple error messages 
     if(isset($_POST['submit'])):
-    
-      $username=$_POST['Name'];
+
+      $email=$_POST['Name'];
       $password=$_POST['Pswd'];
     
-      $username=htmlspecialchars($username);
+      $email=htmlspecialchars($email);
       $password=htmlspecialchars($password);
       /*$username=stripslashes($username);
       $password=stripslashes($password);
@@ -28,7 +35,7 @@
       
       
       
-        if(empty($username)):
+        if(empty($email)):
         
           $errors['Name'] = 'Empty UserName!'; 
           //header("refresh: 5;");
@@ -57,23 +64,29 @@
       }*/
         
           if(empty($errors)):
-                foreach ($Data as $key => $val):
-                  if($key !== $username){
+                foreach ($row as $key => $val):
+                  if($key !== $email){
                     $errors['Name'] = 'No matched record!';
                
                   } else{
                     if($val !== $password){
-                      $erros['Pswd'] = 'No matched record!';
+                      $errors['Pswd'] = 'No matched record!';
                      
                     } else{
-                    if(array_key_exists($username,$Data))
+                    if(array_key_exists($email,$row))
                     {
-                    if($password === $Data[$username])
-                    {
-                      session_start();
-                     $_SESSION['Name']= $username;
-                     //var_dump($_SESSION);
-                     header("Location:../All_Pages/CG.php");
+                    if($password === $row[$email])
+                    { 
+                      while($row=$result->fetch_assoc()){
+                        $arr[]=$row;
+                        }
+                        var_dump($arr);
+                    //  session_start();
+                    // $_SESSION['Name']= $email;
+
+                   //  var_dump($_SESSION);
+                    
+                   //  header("Location:../All_Pages/CG.php");
                      exit();  
                      
                     }
@@ -100,6 +113,13 @@
                         {
                         $errors['Pswd']="Password is incorrect";
                         header("refresh: 5;");  
+
+
+Comments:
+                        1. data might not be recieving from client side and comparing to server side
+                        2. not displaying var_dump
+
+
                         }*/
                 endforeach;
           endif;
@@ -108,3 +128,4 @@
    
    
   ?>
+  

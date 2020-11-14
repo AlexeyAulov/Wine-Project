@@ -10,7 +10,7 @@ define("DATABASE","WINE");
 
 
 $conn = new mysqli(DOMAIN,USERNAME,PWD,DATABASE);
-echo "successfully";
+
 $conn->set_charset("utf8mb4");
 }
 catch(exception $e)

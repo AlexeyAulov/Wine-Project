@@ -60,42 +60,20 @@
               $result=$stmt->get_result();
               
               
-              if( $result->num_rows===0) exit('No rows');
+              if( $result->num_rows===0) 
+              {
+              $errors['Name'] = 'No matched record!';
+              }
               
               $row=$result->fetch_assoc();
+                           
+              $_SESSION['Name']= $row['email'];
               
-              var_dump($row);
-              
+              header("Location:../All_Pages/CG.php");               
                       
-            
-                    if($row['EMAIL'] !== $San_email)
-                    {
-                      $errors['Name'] = 'No matched record!';
-                
-                    } 
-                    else
-                    {
-                      if($row['PASSWORD'] !== $San_password)
-                      {
-                        $errors['Pswd'] = 'No matched record!';
-                      
-                      } 
-                      else
-                      {
-                      
-                        if(array_key_exists($San_email,$row['EMAIL']))
-                      {
-                      if($row['PASSWORD'] === $San_password)
-                      { 
-                         echo "Hi Aliens"; 
-                       // var_dump($_SESSION);
-                          
-                      }
-                    
-                      }
                         
-                      }
-                    }
+                      
+                    
             endif;
       
     endif; 

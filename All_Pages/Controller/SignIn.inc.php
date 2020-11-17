@@ -64,13 +64,14 @@
               {
               $errors['Name'] = 'No matched record!';
               }
-              
+              else
+              {
               $row=$result->fetch_assoc();
                            
               $_SESSION['Name']= $row['email'];
               
               header("Location:../All_Pages/CG.php");               
-                      
+              }   
                         
                       
                     

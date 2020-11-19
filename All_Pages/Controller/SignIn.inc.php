@@ -70,7 +70,7 @@
                            
               $_SESSION['Name']= $row['email'];
               
-              header("Location:../All_Pages/CG.php");               
+              header("Location:../All_Pages/HM.php");               
               }   
                         
                       

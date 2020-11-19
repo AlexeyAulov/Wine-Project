@@ -1,3 +1,7 @@
+<?php
+include("Controller/Signup.inc.php");
+?>
+
 
 <!doctype html>
 <html lang="en">
@@ -64,7 +68,7 @@
               <input type="password" name="Pswd" id="Password" class="form-control" value=<?php echo $password??""; ?>>
               <!--Preg Match to see if it is good-->
               <label for="password">Retype Password</label>
-              <input type="password" name="Pswd" id="Password" class="form-control" value=<?php echo $password??""; ?>>
+              <input type="password" name="Pswd2" id="Password" class="form-control" value=<?php echo $password??""; ?>>
               
             
                  <!--ONE BEG-->
@@ -118,7 +122,8 @@
             
             <br>   
           
-                  <button type="submit" name="submit" class="btn btn-primary" >Submit</button>
+                  <button type="submit" name="SignUpButton" class="btn btn-primary" >Submit</button>
+<p class="text-center">Already a member><a href="../All_Pages/SignIn.php"><br>Sign In</a></p>
 </form>
 
 

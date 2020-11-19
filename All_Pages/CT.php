@@ -87,7 +87,7 @@
       </tr>
   </tbody>
 </table>
-<a href="../All_Pages/checkout.php" class="btn btn-outline-info">Checkout</a>
+<a href="../All_Pages/CI.php" class="btn btn-outline-info">Checkout</a>
    <br>
 
     <!-- Optional JavaScript; choose one of the two! -->

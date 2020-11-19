@@ -1,3 +1,6 @@
+<?php
+include("Controller/InfoInsert.inc.php");
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -54,19 +57,32 @@
         <br>
         <form method="post" class="needs-validation" novalidate>
             <div class="container m-auto">
-                <h3 class="text-center text-dark ">Where should we send your order?</h3>
-                <h4 class="text-dark text-center">Enter your name and address</h4>
+                <h3 class="text-center text-dark ">Part 2</h3>
+                <h4 class="text-dark text-center">Enter Account Information</h4>
             <div class="form-row" >
               <div class="col-md-4 mb-3 ">
                 <label for="validationCustom01">First Name</label>
-                <input type="text" class="form-control" id="validationCustom01" required>
+                <input type="text"  name="First_Name" class="form-control" id="validationCustom01" required>
+                <?php
+                 if(isset($errors['First_Name'])): 
+                 ?>        
+                <div class="alert alert-danger">
+            
+                <?php
+                echo $errors['First_Name'];
+                ?> 
+            
+                </div>
+            
+                <?php endif?>
+            
                 <div class="valid-feedback">
                   Looks good!
                 </div>
               </div>
               <div class="col-md-4 mb-3 ">
                 <label for="validationCustom02">Last Name</label>
-                <input type="text" class="form-control" id="validationCustom02"  required>
+                <input type="text" name="Last_Name" class="form-control" id="validationCustom02"  required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -75,14 +91,14 @@
             <div class="form-row">
               <div class="col-md-6 mb-3 ">
                 <label for="validationCustom03">City</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
+                <input type="text" name="City" class="form-control" id="validationCustom03" required>
                 <div class="invalid-feedback">
                   Please provide a valid city.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom04">State</label>
-                <select class="custom-select" id="validationCustom04" required>
+                <select class="custom-select" name="State" id="validationCustom04" required>
                   <option selected disabled value="">Choose...</option>
                   <option>New York</option>
                   <option>New Jersey</option>
@@ -95,7 +111,7 @@
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom05">Zip Code</label>
-                <input type="text" class="form-control" id="validationCustom05" placeholder=""required>
+                <input type="text" name="Zip_Code" class="form-control" id="validationCustom05" placeholder=""required>
                 <div class="invalid-feedback">
                   Please provide a valid zip.
                 </div>
@@ -103,23 +119,18 @@
             </div>
             <div class="form-group">
                 <label for="disabledTextInput">Country/Region</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="United States">
+                <input type="text" name="Country" id="disabledTextInput" class="form-control" placeholder="United States">
               </div>
-            
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email and phone number with anyone else.</small>
-              </div>
+           
               <div class="form-group">
                 <label for="exampleInputTel1">Phone Number</label>
-                <input type="number" class="form-control" id="tel">
+                <input type="number" name= "Phone_Number" class="form-control" id="tel">
               </div>
              
              
         <div class="row ml-5">
               <div class="form-check m-auto">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <input class="form-check-input" name="Term" type="checkbox" value="" id="invalidCheck" required>
                 <label class="form-check-label" for="invalidCheck">
                   Agree to terms and conditions
                 </label>
@@ -128,15 +139,9 @@
                 </div>
               </div>
         
-            <div class="form-check m-auto">
-                <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-                <label class="form-check-label" for="autoSizingCheck2">
-                  Remember me
-                </label>
-              </div>
             </div>
             <div class=" text-center mt-3">
-                <button class="btn btn-primary" type="submit">Continue to payment</button>
+                <button class="btn btn-primary" name="Create_Button" type="submit">Create Account</button>
                 </div>
         </div>
     </div>

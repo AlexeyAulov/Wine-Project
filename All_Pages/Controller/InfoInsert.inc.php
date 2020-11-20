@@ -74,25 +74,23 @@
                 //isset($_POST('Term')):
                 
                //Update
-                
-               $Insertsql="INSERT INTO customer(FIRST_NAME,LAST_NAME,CITY,STATE,ZIP,COUNTRY,PHONE ,created_at)";
-                $Insertsql.="VALUES(?,?,?,?,?,?,?,FROM_UNIXTIME(UNIX_TIMESTAMP()))";
-                $stmt= $conn->prepare($Insertsql);
-                $stmt->bind_param("ssssisi",$First_Name,$Last_Name,$City,$State,$ZipCode,$Country,$Phone);
                
- 
-                if($stmt->execute())
+
+              // UPDATE `customer` SET `id`=[value-1],`first_name`=[value-2],`last_name`=[value-3],`state`=[value-4],`zip`=[value-5],`country`=[value-6],`email`=[value-7],`phone`=[value-8],`password`=[value-9],`created_at`=[value-10],`updated_at`=[value-11] WHERE 1
+               
+               
+                
+                $Usql="UPDATE  customer SET first_name=?, last_name=?, City=?, state=?, zip=?, country=?,phone=? WHERE id=? LIMIT 1 ";
+                $stmt= $conn->prepare($Usql);
+                $stmt->bind_param("ssssisii",$First_Name,$Last_Name,$City,$State,$ZipCode,$Country,$Phone,$user_id);
+               var_dump($_SESSION);
+               
+               
+               if($stmt->execute())
                 {   
-                    $_SESSION['First_Name']=$First_Name;
-                    $_SESSION['Last_Name']=$Last_Name;
-                    $_SESSION['City']=$City;
-                    $_SESSION['State']=$State;
-                    $_SESSION['Zip_Code']=$ZipCode;
-                    $_SESSION['Country']=$Country;
-                    $_SESSION['Phone_Number']=$Phone;
+                 
 
-
-                    var_dump($_SESSION);
+                    //var_dump($_SESSION);
                
                     $_SESSION['message'] = "Congatulation on creating an account!";
                     $_SESSION['alert-class']="alert-success";

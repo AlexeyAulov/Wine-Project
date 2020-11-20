@@ -67,10 +67,11 @@
               else
               {
               $row=$result->fetch_assoc();
-                           
-              $_SESSION['Name']= $row['email'];
+              session_start();            
+              $_SESSION['email']= $row['email'];
+              $_SESSION['id'] = $row['id'];
               
-              header("Location:../All_Pages/HM.php");               
+              header("Location:../All_Pages/CI.php");               
               }   
                         
                       

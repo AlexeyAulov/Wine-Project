@@ -61,7 +61,7 @@ if(count($errors)===0)
 
     $_SESSION['message'] = "You are logged in!";
     $_SESSION['alert-class']="alert-success";
-    header('Location:../All_Pages/CG.php');
+    header('Location:../All_Pages/CI.php');
     exit();
     }
     else

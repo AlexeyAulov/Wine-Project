@@ -1,8 +1,6 @@
 <?php
 include("Controller/SignIn.inc.php");
 ?>
-<?php session_start();
-?>
 <!doctype html>
 <html lang="en">
   <head>

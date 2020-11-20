@@ -1,5 +1,8 @@
 <?php
 include("Controller/InfoInsert.inc.php");
+var_dump($_SESSION);
+echo "<br>";
+var_dump($result);
 ?>
 <!doctype html>
 <html lang="en">
@@ -37,9 +40,7 @@ include("Controller/InfoInsert.inc.php");
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
-          <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign in</a>
+		     <a class="dropdown-item" href="../All_Pages/CI.php">View Information</a>
           <a class="dropdown-item" href="#">Sign out</a>
         </div>
       </li>
@@ -55,14 +56,17 @@ include("Controller/InfoInsert.inc.php");
   </header>
           
         <br>
-        <form method="post" class="needs-validation" novalidate>
+        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" class="needs-validation" novalidate>
             <div class="container m-auto">
                 <h3 class="text-center text-dark ">Part 2</h3>
                 <h4 class="text-dark text-center">Enter Account Information</h4>
+            
+            
+            
             <div class="form-row" >
               <div class="col-md-4 mb-3 ">
                 <label for="validationCustom01">First Name</label>
-                <input type="text"  name="First_Name" class="form-control" id="validationCustom01" required>
+                <input type="text"  name="First_Name" class="form-control" id="validationCustom01" value="<?php echo $result['first_name']; ?>" required>
                 <?php
                  if(isset($errors['First_Name'])): 
                  ?>        
@@ -74,59 +78,121 @@ include("Controller/InfoInsert.inc.php");
             
                 </div>
             
-                <?php endif?>
-            
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
+                <?php 
+                endif;
+                ?>
               </div>
               <div class="col-md-4 mb-3 ">
                 <label for="validationCustom02">Last Name</label>
                 <input type="text" name="Last_Name" class="form-control" id="validationCustom02"  required>
-                <div class="valid-feedback">
-                  Looks good!
+                <?php
+                 if(isset($errors['Last_Name'])): 
+                 ?>        
+                <div class="alert alert-danger">
+            
+                <?php
+                echo $errors['Last_Name'];
+                ?> 
+            
                 </div>
+            
+                <?php 
+                endif;
+                ?>
               </div>
             </div>
             <div class="form-row">
               <div class="col-md-6 mb-3 ">
                 <label for="validationCustom03">City</label>
                 <input type="text" name="City" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                  Please provide a valid city.
+                <?php
+                 if(isset($errors['City'])): 
+                 ?>        
+                <div class="alert alert-danger">
+            
+                <?php
+                echo $errors['City'];
+                ?> 
+            
                 </div>
+            
+                <?php 
+                endif;
+                ?>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom04">State</label>
-                <select class="custom-select" name="State" id="validationCustom04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>New York</option>
-                  <option>New Jersey</option>
-                  <option>Pensilvania</option>
-                  <option>Connecticut</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid state.
+                <input type="text" name="State" class="form-control" id="validationCustom03" required>
+                <?php
+                 if(isset($errors['State'])): 
+                 ?>        
+                <div class="alert alert-danger">
+            
+                <?php
+                echo $errors['State'];
+                ?> 
+            
                 </div>
+            
+                <?php 
+                endif;
+                ?>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom05">Zip Code</label>
                 <input type="text" name="Zip_Code" class="form-control" id="validationCustom05" placeholder=""required>
-                <div class="invalid-feedback">
-                  Please provide a valid zip.
+                <?php
+                 if(isset($errors['Zip_Code'])): 
+                 ?>        
+                <div class="alert alert-danger">
+            
+                <?php
+                echo $errors['Zip_Code'];
+                ?> 
+            
                 </div>
+            
+                <?php 
+                endif;
+                ?>
               </div>
             </div>
             <div class="form-group">
                 <label for="disabledTextInput">Country/Region</label>
                 <input type="text" name="Country" id="disabledTextInput" class="form-control" placeholder="United States">
               </div>
-           
+              <?php
+                 if(isset($errors['Country'])): 
+                 ?>        
+                <div class="alert alert-danger">
+            
+                <?php
+                echo $errors['Country'];
+                ?> 
+            
+                </div>
+            
+                <?php 
+                endif;
+                ?>
               <div class="form-group">
                 <label for="exampleInputTel1">Phone Number</label>
                 <input type="number" name= "Phone_Number" class="form-control" id="tel">
               </div>
-             
+              <?php
+                 if(isset($errors['Phone_Number'])): 
+                 ?>        
+                <div class="alert alert-danger">
+            
+                <?php
+                echo $errors['Phone_Number'];
+                ?> 
+            
+                </div>
+            
+                <?php 
+                endif;
+                ?>
              
         <div class="row ml-5">
               <div class="form-check m-auto">
@@ -134,9 +200,20 @@ include("Controller/InfoInsert.inc.php");
                 <label class="form-check-label" for="invalidCheck">
                   Agree to terms and conditions
                 </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
+                <?php
+                 if(isset($errors['Terms'])): 
+                 ?>        
+                <div class="alert alert-danger">
+            
+                <?php
+                echo $errors['Terms'];
+                ?> 
+            
                 </div>
+            
+                <?php 
+                endif;
+                ?>
               </div>
         
             </div>

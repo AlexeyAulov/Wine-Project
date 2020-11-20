@@ -1,11 +1,22 @@
 <?php
-   
-   
    include_once "Includes/dbconnect.inc.php";
+   session_start();
+
+   $user_id = $_SESSION['id'];
+
+   $query = "SELECT first_name, last_name, city, state, zip, country, phone FROM customer WHERE id = ? LIMIT 1";
+
+   $stmt = $conn->prepare($query);
+   $stmt->bind_param("i", $user_id);
+   $stmt->execute();
+   $result = $stmt->get_result()->fetch_assoc();
+
+   var_dump($result);
+   
+   
+   
    
    $errors=[];
-   
-
    
    if(isset($_POST['Create_Button'])):        
             $First_Name=$_POST['First_Name'];
@@ -16,10 +27,10 @@
             $Country=$_POST['Country'];
             $Phone=$_POST['Phone_Number'];
           //  $Terms=$_POST['Term'];
-
+            /*
             if(empty($First_Name))
             {
-                $errors['FIRST_NAME']="First Name Required!";
+                $errors['First_Name']="First Name Required!";
             }
             if(empty($Last_Name))
             {
@@ -38,7 +49,7 @@
             
             if(empty($ZipCode))
             {
-                $errors['ZipCode']="Zip Code Required!";
+                $errors['Zip_Code']="Zip Code Required!";
             }
             
             if(empty($Country))
@@ -50,6 +61,7 @@
             {
                 $errors['Phone_Number']="Phone Number Required";
             }
+            */
             
            /* if(empty($Terms))
             {
@@ -61,21 +73,30 @@
             
                 //isset($_POST('Term')):
                 
-                $Insertsql="INSERT INTO customer(FIRST_NAME,LAST_NAME,CITY,STATE,ZIP,COUNTRY,PHONE ,created_at)";
+               //Update
+                
+               $Insertsql="INSERT INTO customer(FIRST_NAME,LAST_NAME,CITY,STATE,ZIP,COUNTRY,PHONE ,created_at)";
                 $Insertsql.="VALUES(?,?,?,?,?,?,?,FROM_UNIXTIME(UNIX_TIMESTAMP()))";
                 $stmt= $conn->prepare($Insertsql);
                 $stmt->bind_param("ssssisi",$First_Name,$Last_Name,$City,$State,$ZipCode,$Country,$Phone);
-                $stmt->execute();
-                $result=$stmt->get_result();
-                
+               
+ 
                 if($stmt->execute())
                 {   
-                    //$row=$result->fetch_assoc();
-                    //$_SESSION['First_Name']= $row['First_Name'];
+                    $_SESSION['First_Name']=$First_Name;
+                    $_SESSION['Last_Name']=$Last_Name;
+                    $_SESSION['City']=$City;
+                    $_SESSION['State']=$State;
+                    $_SESSION['Zip_Code']=$ZipCode;
+                    $_SESSION['Country']=$Country;
+                    $_SESSION['Phone_Number']=$Phone;
 
-                $_SESSION['message'] = "Congatulation on creating an account!";
-                $_SESSION['alert-class']="alert-success";
-                var_dump($_SESSION);
+
+                    var_dump($_SESSION);
+               
+                    $_SESSION['message'] = "Congatulation on creating an account!";
+                    $_SESSION['alert-class']="alert-success";
+                
              
                 }
                 else
@@ -86,7 +107,7 @@
             
 
             endif;
-endif;
+    endif;
 
 //CREATE INSERT FOR EVERYTHING ELSE IN CHECKOUT
 //CHECK IF INSERT WORKS

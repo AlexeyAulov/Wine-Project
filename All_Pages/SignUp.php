@@ -1,8 +1,6 @@
 <?php
 include("Controller/Signup.inc.php");
 ?>
-
-
 <!doctype html>
 <html lang="en">
   <head>

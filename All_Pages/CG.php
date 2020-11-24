@@ -93,10 +93,9 @@ include("Controller\Catalog.inc.php");
 
 
   foreach($result as $wines)
-  echo $wine_name;
+  echo $wine_name['wine_name'];
+?>  
 
-  
- ?>  
 </form>
 <button type="submit" name="Previous" class="btn btn-primary" >Previous</button>
 <button type="submit" name="Next" class="btn btn-primary" >Next</button>

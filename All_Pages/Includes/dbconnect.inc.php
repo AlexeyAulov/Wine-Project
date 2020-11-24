@@ -12,6 +12,7 @@ define("DATABASE","WINE");
 $conn = new mysqli(DOMAIN,USERNAME,PWD,DATABASE);
 
 $conn->set_charset("utf8mb4");
+
 }
 catch(exception $e)
 {

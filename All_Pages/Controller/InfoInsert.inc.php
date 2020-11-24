@@ -11,7 +11,7 @@
    $stmt->execute();
    $result = $stmt->get_result()->fetch_assoc();
 
-   var_dump($result);
+   //var_dump($result);
    
    
    

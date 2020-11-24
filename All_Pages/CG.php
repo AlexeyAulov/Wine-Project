@@ -1,5 +1,6 @@
 <?php 
-  session_start();
+session_start();
+include("Controller\Catalog.inc.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -54,13 +55,18 @@
   </header>
     <br>
 
-    
+
+
+
+
+    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" class="needs-validation" novalidate>
+   
     <div class="card-deck">
       <div class="card bg-secondary text-white">
-        <img src="../Pic/Wine_CG_1.jpg" class="card-img-top" alt="...">
+       <img src="../Pic/Wine_CG_1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title" name='wineName' value=<?php echo $wine_name??""; ?>></h5>
+          <p class="card-text"></p>
           <a href="#" class="btn btn-outline-info">Go somewhere</a>
         </div>
       </div>
@@ -69,49 +75,31 @@
         <img src="../Pic/Wine_CG_2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text" name='wineName' value=<?php echo $wine_name??""; ?>></p>
           <a href="#" class="btn btn-outline-info">Go somewhere</a>
         </div>
       </div>
             <div class="card bg-secondary text-white">
         <img src="../Pic/Wine_CG_3.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title" name='wineName' value=<?php echo $wine_name??""; ?>>Card title</h5>
+          <p class="card-text"></p>
           <a href="#" class="btn btn-outline-info">Go somewhere</a>
         </div>
     </div>
   </div>
-  <br>
-  <br>
-  <div class="card-deck">
-      <div class="card bg-secondary text-white">
-        <img src="../Pic/Wine_CG_4.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <a href="#" class="btn btn-outline-info">Go somewhere</a>
-        </div>
-      </div>
-      
-      <div class="card bg-secondary text-white">
-        <img src="../Pic/Wine_CG_5.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <a href="#" class="btn btn-outline-info">Go somewhere</a>
-        </div>
-      </div>
-      
-      <div class="card bg-secondary text-white">
-        <img src="../Pic/Wine_CG_6.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <a href="#" class="btn btn-outline-info">Go somewhere</a>
-        </div>
-      </div>
-   </div>   
+<?php
+
+
+
+  foreach($result as $wines)
+  echo $wine_name;
+
+  
+ ?>  
+</form>
+<button type="submit" name="Previous" class="btn btn-primary" >Previous</button>
+<button type="submit" name="Next" class="btn btn-primary" >Next</button>
   
 <br>
 

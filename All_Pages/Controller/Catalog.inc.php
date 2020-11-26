@@ -12,7 +12,11 @@
    //Just counting wine rows
    $count_query="SELECT COUNT(wine_name) as R FROM wines";
    $stmt=$conn->prepare($count_query);
+   
+   //execute query
    $stmt->execute();
+
+   //count how many records in total
    $result = $stmt->get_result()->fetch_assoc();
    
   
@@ -21,14 +25,10 @@
    //var_dump($result);
    //echo $records;
 
-   //if(7>3)
    //{totalpages=ceil(7/3)} totalpages = 2.33 ceil rounds up to 3 total pages
    //defualt is one page
    
    if ($records>$pagerows){
-       $total_pages=ceil($records/$pagerows);
-   }else{
-       $total_pages=1;
    }
 
     /*Select a wine from wines where offset is up to 3 and page rows is 3 for page 1
@@ -46,7 +46,7 @@
    $stmt->bind_param("ii", $offset, $pagerows);
     $stmt->execute();   
 
-$result=$stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+   $result=$stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
 if ($result){
     var_dump($result);

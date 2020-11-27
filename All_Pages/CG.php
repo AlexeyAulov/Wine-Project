@@ -1,5 +1,5 @@
 <?php 
-
+include_once("Controller\product_detail.inc.php");
 include("Controller\Catalog.inc.php");
 ?>
 <!doctype html>
@@ -55,31 +55,23 @@ include("Controller\Catalog.inc.php");
   </header>
     <br>
 
+    <!--<h2><a href="shopping_cart.php" target="_blank"> Shopping Cart </a></h2>-->
 
-
-
-
-    <?php
-    foreach($result as $wines)
-    
-    {
-    ?>
-   
-      <div action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST" class="main-form needs-validation card-deck">
-      <div class="card bg-secondary text-white">
-       <img src="../Pic/Wine_CG_1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title" name='wineName' value=<?php echo $GET['wine_name']; ?>></h5>
-          <p class="card-text"></p>
-          <a href="#" class="btn btn-outline-info">Go somewhere</a>
-        </div>
-      </div>   
+    <h2 style="text-align: center">Wine Card</h2>
+    <div class="card">  
+      <img src="<?php echo $wines['image']; ?>" alt="wine_name" style="width: 100%">
+      <h1><?php echo $wines['image']; ?></h1>
+      <p class="price"><?php echo $wines['price_btl'];?></p>
+      <form action="includes/add_cart.inc.php" method="GET">
+        <input type='text' name="quality" value=1 size="2">
+        <input type="hidden" name="WNAME" value="<?php echo $wines['wine_name']; ?>" />
+        <input type='submit' name="add_to_cart" value='Add to Cart'>
+      </form>
     </div>
 
-    <?php
-    }
-    ?>
-<br>
+
+
+  
 
     <!-- Optional JavaScript; choose one of the two! -->
 

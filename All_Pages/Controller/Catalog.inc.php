@@ -7,7 +7,7 @@
    }else{
        $current_page=1;
    }
-   $offset=($current_page-1)*$pagerows;
+   $start=($current_page-1)*$pagerows;
    
    //Just counting wine rows
    $count_query="SELECT COUNT(wine_name) as R FROM wines";
@@ -28,9 +28,15 @@
    //{totalpages=ceil(7/3)} totalpages = 2.33 ceil rounds up to 3 total pages
    //defualt is one page
    
-   if ($records>$pagerows){
-   }
+   if ($records>$pagerows)
+   {
+    $total_pages = ceil($records/$pagerows);
 
+    }
+    else
+    {
+    $total_pages = 1;
+    }
     /*Select a wine from wines where offset is up to 3 and page rows is 3 for page 1
     offset is 6 on page 2 rows is 3 for page 1
     offset is 9 but prints 1 row because its the last row*/
@@ -43,7 +49,7 @@
    /*Echos out all wine per row and after row limit goes to next page etc*/
    //echo $query1;
    $stmt=$conn->prepare($query1);
-   $stmt->bind_param("ii", $offset, $pagerows);
+   $stmt->bind_param("ii", $start, $pagerows);
     $stmt->execute();   
 
    $result=$stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -65,6 +71,7 @@ if ($current_page<$total_pages){
     echo'<a href="CG.php?page='.($current_page+1).'"> Next </a>';
 
 }
+
 ?>
 
 

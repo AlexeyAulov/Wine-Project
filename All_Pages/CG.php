@@ -59,41 +59,26 @@ include("Controller\Catalog.inc.php");
 
 
 
-  <?php
-
-//$wines=array($query1);
-for ($i=0; $i<$records; $i++){
-   ?>
-    <div action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST" class="main-form needs-validation card-deck">
+    <?php
+    foreach($result as $wines)
+    
+    {
+    ?>
+   
+      <div action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST" class="main-form needs-validation card-deck">
       <div class="card bg-secondary text-white">
        <img src="../Pic/Wine_CG_1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title" name='wineName' value=<?php echo $wine_name[$i]; }?>></h5>
+          <h5 class="card-title" name='wineName' value=<?php echo $GET['wine_name']; ?>></h5>
           <p class="card-text"></p>
           <a href="#" class="btn btn-outline-info">Go somewhere</a>
         </div>
       </div>   
     </div>
 
-  <?php
- 
- 
-if($current_page>1){
-
- ?>
-    <button type="submit" name="Previous" class="btn btn-primary" 
-    value="<?php echo '<a href="CG.php?page='.($current_page-1).'">Previous</a>';?> "></button>
-   <?php
-}
-if ($current_page<$total_pages){
+    <?php
+    }
     ?>
-    <button type="submit" name="Next" class="btn btn-primary" 
-    value="<?php echo'<a href="CG.php?page='.($current_page+1).'">Next</a>';?> "></button>
-  
-  <?php  
-}
-?>
-
 <br>
 
     <!-- Optional JavaScript; choose one of the two! -->

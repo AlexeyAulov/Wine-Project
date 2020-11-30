@@ -2,8 +2,8 @@
 include_once 'Includes/dbconnect.inc.php';
 include_once 'get_product.inc.php';
 $addedMsg = '';
-if(isset($_GET['added'])){
-	if($_GET['added'] == 1){
+if(isset($_GET['add_to_cart'])){
+	if($_GET['add_to_cart'] == 1){
 		$addedMsg = "Item is added to cart!";
 	}
 	else{

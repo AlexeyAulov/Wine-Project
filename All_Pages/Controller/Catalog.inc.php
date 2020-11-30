@@ -43,7 +43,7 @@
     offset is 9 but prints 1 row because its the last row*/
 
 
-   $query1= "SELECT wine_name";
+   $query1= "SELECT *";
    $query1 .= " FROM wines";
    $query1 .= " LIMIT ?,?";
 
@@ -65,13 +65,6 @@ else
     exit();
 }
 $stmt->close();
-if($current_page>1){
-    echo '<a href="CG.php?page='.($current_page-1).'">Previous</a>';
-}
-if ($current_page<$total_pages){
-    echo'<a href="CG.php?page='.($current_page+1).'"> Next </a>';
-
-}
 
 ?>
 

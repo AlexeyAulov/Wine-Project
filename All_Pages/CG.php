@@ -1,5 +1,5 @@
 <?php 
-include_once("Controller\product_detail.inc.php");
+//include_once("Controller\product_detail.inc.php");
 include("Controller\Catalog.inc.php");
 ?>
 <!doctype html>
@@ -33,7 +33,7 @@ include("Controller\Catalog.inc.php");
         <a class="nav-link" href="../All_Pages/AU.php">About us <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="../All_Pages/LISU.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        a class="nav-link dropdown-toggle" href="../All_Pages/LISU.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -56,19 +56,34 @@ include("Controller\Catalog.inc.php");
     <br>
 
     <!--<h2><a href="shopping_cart.php" target="_blank"> Shopping Cart </a></h2>-->
-
     <h2 style="text-align: center">Wine Card</h2>
-    <div class="card">  
-      <img src="<?php echo $wines['image']; ?>" alt="wine_name" style="width: 100%">
-      <h1><?php echo $wines['image']; ?></h1>
-      <p class="price"><?php echo $wines['price_btl'];?></p>
-      <form action="includes/add_cart.inc.php" method="GET">
-        <input type='text' name="quality" value=1 size="2">
-        <input type="hidden" name="WNAME" value="<?php echo $wines['wine_name']; ?>" />
-        <input type='submit' name="add_to_cart" value='Add to Cart'>
-      </form>
-    </div>
+    <?php 
+      foreach($result as $k => $wine){
+    ?>
+          <div class="card">  
+          <img src="../Pic/<?php echo $wine['image']; ?>" alt="wine_name" style="width: 100%">
+          <h1><?php echo $wine['wine_name']; ?></h1>
+          <p class="price">$<?php echo $wine['price_btl'];?></p>
+          <form action="includes/add_cart.inc.php" method="GET">
+            <input type='text' name="quality" value=1 size="2">
+            <input type="hidden" name="WNAME" value="<?php echo $wine['wine_id']; ?>" />
+            <input type='submit' name="add_to_cart" value='Add to Cart'>
+          </form>
+        </div>
+    <?php
+    
+      }
+    
+    ?>
 
+    <?php
+      if($current_page>1){
+        echo '<a href="CG.php?page='.($current_page-1).'">Previous</a>';
+      }
+      if ($current_page<$total_pages){
+          echo'<a href="CG.php?page='.($current_page+1).'"> Next </a>';
+      }
+    ?>
 
 
   

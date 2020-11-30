@@ -1,5 +1,6 @@
 <?php
-	include_once 'Includes/dbconnect.inc.php';
+	
+	//include_once 'Includes/dbconnect.inc.php';
 
 
 	function get_product_once($conn, $id){

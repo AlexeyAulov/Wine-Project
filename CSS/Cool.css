@@ -17,17 +17,28 @@
 color:  #5bc0de !important;
 }
 .card{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	max-width: 410px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  
+  /*max-width: 410px;*/
+  overflow: hidden;
   max-height:500px;
   margin-left:250px;
-	text-align: center;
+  padding-bottom:20px;
+  overflow: hidden;
 	font-family: arial;
   position: relative;
   display: inline-block;
+ 
+
 }
 
 .price {
 	color: grey;
 	font-size: 22px;
+}
+
+.footer-button
+{
+  text-align:center;
 }

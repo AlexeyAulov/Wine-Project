@@ -33,7 +33,7 @@ include("Controller\Catalog.inc.php");
         <a class="nav-link" href="../All_Pages/AU.php">About us <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
-        a class="nav-link dropdown-toggle" href="../All_Pages/LISU.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <a class="nav-link dropdown-toggle" href="../All_Pages/LISU.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -56,8 +56,11 @@ include("Controller\Catalog.inc.php");
     <br>
 
     <!--<h2><a href="shopping_cart.php" target="_blank"> Shopping Cart </a></h2>-->
-    <h2 style="text-align: center">Wine Card</h2>
-    <?php 
+  <?php
+    if ($result){
+  ?>    
+    <h2 style="text-align: center">Representing the Finist Wine</h2>
+        <?php 
       foreach($result as $k => $wine){
     ?>
           <div class="card">  
@@ -67,7 +70,7 @@ include("Controller\Catalog.inc.php");
           <form action="includes/add_cart.inc.php" method="GET">
             <input type='text' name="quality" value=1 size="2">
             <input type="hidden" name="WNAME" value="<?php echo $wine['wine_id']; ?>" />
-            <input type='submit' name="add_to_cart" value='Add to Cart'>
+            <input type='submit' name="add_to_cart" value='add to cart'>
           </form>
         </div>
     <?php
@@ -75,16 +78,31 @@ include("Controller\Catalog.inc.php");
       }
     
     ?>
+<?php
+}
+else
+{
+    echo "<p>There is no records!!! </p>";
+    exit();
+}
 
+?>
+<br>
+<br>
+
+<footer class="footer">
     <?php
       if($current_page>1){
-        echo '<a href="CG.php?page='.($current_page-1).'">Previous</a>';
+        echo '<a href="CG.php?page='.($current_page-1).'"><div class="text-center"><button type="button"style="text-center" class="btn btn-outline-info">Previous</div></button></a>';
       }
       if ($current_page<$total_pages){
-          echo'<a href="CG.php?page='.($current_page+1).'"> Next </a>';
+          echo'<a href="CG.php?page='.($current_page+1).'"> <div class="text-center"><button type="button"class="btn btn-outline-info">Next</div></button> </a>';
       }
     ?>
+</footer>
 
+<br>
+<br>
 
   
 

@@ -55,15 +55,7 @@
 
    $result=$stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
-if ($result){
-    var_dump($result);
-   
-}
-else
-{
-    echo "<p>There is no records!!! </p>";
-    exit();
-}
+
 $stmt->close();
 
 ?>

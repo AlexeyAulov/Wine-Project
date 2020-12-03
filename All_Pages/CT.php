@@ -1,5 +1,6 @@
 <?php 
-  session_start();
+ include("Controller\Catalog.inc.php");
+ session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -62,33 +63,43 @@
   <table class="table table-dark">
   <thead>
     <tr>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
+      <th scope="col">Wine</th>
       <th scope="col">Quantity</th>
-      <th scope="col">Charge</th>
+      <th scope="col">Price</th>
+      <th scope="col">Sub-total</th>
     </tr>
   </thead>
+  
+  
+  <?php
+    if ($result){
+  ?>    
   <tbody>
-    <tr>
+  <?php 
+      foreach($cart as $Wine_ID=>$quan)
+      {
+  ?>
+  <tr>
     
-      <td>Peter</td>
-      <td>Parker</td>
-      <th scope="row">2</th>
-      <td>$20,000</td>
-    </tr>
-    <tr>
-    <td>Victor</td>
-      <td>Von Doom</td>
-      <th scope="row">3</th>
-      <td>$200</td>
-    </tr>
-    <tr>
-    <td>Marry</td>
-      <td>Jane</td>
-      <th scope="row">15</th>
-      <td>$9,999,999,999</td>
+      <td><?php echo $id['wine_name']?></td>
+      <td><?php echo $quan ?></td>
+      <td><?php echo "$".$id['price_btl']*$quan?></td>
+      <td><?php echo "$".$id['price_btl']*$quan?></td>
       </tr>
-  </tbody>
+      <?php
+    }
+    ?>
+    <?php
+    }
+    else
+    {
+        echo "<p>There is no records!!! </p>";
+        exit();
+    }
+  ?>  
+</tbody>
+
+
 </table>
 <a href="../All_Pages/CI.php" class="btn btn-outline-info">Checkout</a>
    <br>

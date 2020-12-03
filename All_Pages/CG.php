@@ -1,5 +1,4 @@
 <?php 
-//include_once("Controller\product_detail.inc.php");
 include("Controller\Catalog.inc.php");
 ?>
 <!doctype html>
@@ -59,7 +58,7 @@ include("Controller\Catalog.inc.php");
   <?php
     if ($result){
   ?>    
-    <h2 style="text-align: center">Representing the Finist Wine</h2>
+    <h2 style="text-align: center">Representing the Finest Wine</h2>
         <?php 
       foreach($result as $k => $wine){
     ?>
@@ -68,7 +67,7 @@ include("Controller\Catalog.inc.php");
           <h1><?php echo $wine['wine_name']; ?></h1>
           <p class="price">$<?php echo $wine['price_btl'];?></p>
           <form action="includes/add_cart.inc.php" method="GET">
-            <input type='text' name="quality" value=1 size="2">
+            <input type='text' name="quantity" value=1 size="2">
             <input type="hidden" name="WNAME" value="<?php echo $wine['wine_id']; ?>" />
             <input type='submit' name="add_to_cart" value='add to cart'>
           </form>

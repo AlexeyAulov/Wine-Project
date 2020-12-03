@@ -71,7 +71,7 @@
               $_SESSION['email']= $row['email'];
               $_SESSION['id'] = $row['id'];
               
-              header("Location:../All_Pages/CI.php");               
+              header("Location:../All_Pages/CG.php");               
               }   
                         
                       

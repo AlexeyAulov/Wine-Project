@@ -66,9 +66,9 @@ include("Controller\Catalog.inc.php");
           <img src="../Pic/<?php echo $wine['image']; ?>" alt="wine_name" style="width: 100%">
           <h1><?php echo $wine['wine_name']; ?></h1>
           <p class="price">$<?php echo $wine['price_btl'];?></p>
-          <form action="includes/add_cart.inc.php" method="GET">
+          <form action="Controller/add_cart.inc.php" method="GET">
             <input type='text' name="quantity" value=1 size="2">
-            <input type="hidden" name="WNAME" value="<?php echo $wine['wine_id']; ?>" />
+            <input type="hidden" name="Wine_ID" value="<?php echo $wine['wine_id']; ?>" />
             <input type='submit' name="add_to_cart" value='add to cart'>
           </form>
         </div>

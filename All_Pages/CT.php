@@ -1,6 +1,6 @@
 <?php 
- include("Controller\Catalog.inc.php");
- session_start();
+ include("Controller\ManipCart.inc.php");
+ var_dump($cart);
 ?>
 <!doctype html>
 <html lang="en">
@@ -72,20 +72,25 @@
   
   
   <?php
-    if ($result){
+    if ($cart){
   ?>    
   <tbody>
   <?php 
-      foreach($cart as $Wine_ID=>$quan)
+      foreach($cart as $index=>$wine)
       {
   ?>
+  <form action="Controller/ManipCart.inc.php" method="GET">
   <tr>
-    
-      <td><?php echo $id['wine_name']?></td>
-      <td><?php echo $quan ?></td>
-      <td><?php echo "$".$id['price_btl']*$quan?></td>
-      <td><?php echo "$".$id['price_btl']*$quan?></td>
+  <?php        $quan = $wine['quantity']; ?>
+      <td><?php echo $wine['wine_name']; ?></td>
+      <td><?php echo $wine['quantity']; ?></td>
+      <td><input type='text' name="quantity" value=1 size="2"></td>
+      <td><input type='submit' name="Edit" value='edit'></td>
+      <td><input type='submit' name="Delete" value='delete'></td></td>
+      <td><?php echo "$".$wine['price_btl']*$quan; ?></td>
+      <td><?php echo "$".$wine['price_btl']*$quan; ?></td>
       </tr>
+     </form>
       <?php
     }
     ?>

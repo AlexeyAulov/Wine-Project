@@ -1,5 +1,5 @@
 <?php
-include_once 'Includes/dbconnect.inc.php';
+include_once '../Includes/dbconnect.inc.php';
 include_once 'functions.inc.php';
 
 
@@ -19,8 +19,8 @@ session_start();
 //postcondition:sanitizing is done
 
 
-
-$Wine_ID = htmlspecialchars($_GET['wine_id']);
+$Wine_ID = htmlspecialchars($_GET['Wine_ID']);
+$Wine_ID = (int)$Wine_ID;
 $quan=htmlspecialchars($_GET['quantity']);
 
 
@@ -28,43 +28,33 @@ $quan=htmlspecialchars($_GET['quantity']);
 
 //postcondition: if session has no orders then the button array is null
 
-$cart_item = [$Wine_ID => $quan];
+$count_query="SELECT COUNT(wine_id) as R FROM orders where user_id = ? AND wine_id = ?";
+$stmt=$conn->prepare($count_query);
+$stmt->bind_param("ii",$_SESSION['id'], $Wine_ID);
+$stmt->execute();
+$result = $stmt->get_result()->fetch_assoc();
+$records=$result['R'];
 
-if(!isset($_SESSION['cart']))
+if($records === 0)
 {
-    $_SESSION['cart']=[];
-
+    $insertquery="INSERT INTO orders(user_id, quantity,wine_id)";
+    $insertquery.="VALUES(?,?,?)";
+    $stmt=$conn->prepare($insertquery);
+    $stmt->bind_param("iii",$_SESSION['id'],$quan,$Wine_ID);
+    $stmt->execute();  
+    
 }
-
-//Precondition:If wine_id exists in Session
-
-//postcondition: amount of wine per id, displays item ID
-
-if(array_key_exists($Wine_ID,$_SESSION['cart']))
+elseif($records>0)
 {
-    $_SESSION['cart'][$Wine_ID]+=$quan;
-    header('Location:../product_detail.php?id='.$Wine_ID.'&add_to_cart=1');
-}
-else
-//Precondition:?
- 
-{
-$_SESSION['cart'][$Wine_ID]=$quan;
-header('Location:../product_detail.php?id='.$Wine_ID.'&add_to_cart=1');
-}
 
-//$insertquery="INSERT INTO orders(quantity,wine_name)";
-//$insertquery.="VALUES(?,?)";
-//$stmt=$conn->prepare($insertquery);
-//$stmt->bind_param("ii ",$quan,$Wine_ID);
-//$stmt->execute();   
-
+    ///Update orders
+    //Set quantity = 2
+    //where user_id = 6 AND wine_id = 1;
+}
 
 $orderquery= "SELECT *";
 $orderquery .= " FROM orders";
 $orderquery .= " LIMIT ?,?";
-
-
 $stmt=$conn->prepare($orderquery);
 $stmt->bind_param("ii", $Wine_ID,$quan);
 $stmt->execute();   
@@ -74,8 +64,15 @@ $resultorder=$stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 $guestMsg='';
 if(!isset($_SESSION['id']))
 {
-    $guestMsg="Check out as Guest";
+    echo"Check out as Guest";
+
 }
-$cart =$_SESSION['cart'];
+$cart =$_SESSION['orders'];
+
+if(!isset($_GET['update']))
+{
+    header('Location: ../CT.php');
+    exit();
+}
 
 ?>

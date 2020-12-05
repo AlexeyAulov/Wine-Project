@@ -46,10 +46,14 @@ if($records === 0)
 }
 elseif($records>0)
 {
+ 
 
-    ///Update orders
-    //Set quantity = 2
-    //where user_id = 6 AND wine_id = 1;
+
+    $updatequery="UPDATE orders SET quantity = ? WHERE user_id = ? AND wine_id = ?";
+    $stmt=$conn->prepare($updatequery);
+    $stmt->bind_param("iii",$quan,$_SESSION['id'],$Wine_ID);
+    $stmt->execute(); 
+    
 }
 
 $orderquery= "SELECT *";

@@ -65,8 +65,12 @@
     <tr>
       <th scope="col">Wine</th>
       <th scope="col">Quantity</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
       <th scope="col">Price</th>
       <th scope="col">Sub-total</th>
+     
     </tr>
   </thead>
   
@@ -84,10 +88,10 @@
   <?php        $quan = $wine['quantity']; ?>
       <td><?php echo $wine['wine_name']; ?></td>
       <td><?php echo $wine['quantity']; ?></td>
-      <td><input type='text' name="quantity" value=1 size="2"></td>
       <td><input type='submit' name="Edit" value='edit'></td>
+      <td><input type='text' name="quantity" value=1 size="2"></td>
       <td><input type='submit' name="Delete" value='delete'></td></td>
-      <td><?php echo "$".$wine['price_btl']*$quan; ?></td>
+      <td><?php echo "$".$wine['price_btl']; ?></td>
       <td><?php echo "$".$wine['price_btl']*$quan; ?></td>
       </tr>
      </form>

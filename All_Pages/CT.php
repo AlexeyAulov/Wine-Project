@@ -68,6 +68,7 @@
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
+      <th scope="col"></th>
       <th scope="col">Price</th>
       <th scope="col">Sub-total</th>
      
@@ -83,13 +84,14 @@
       foreach($cart as $index=>$wine)
       {
   ?>
-  <form action="Controller/ManipCart.inc.php" method="GET">
+  <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
   <tr>
   <?php        $quan = $wine['quantity']; ?>
       <td><?php echo $wine['wine_name']; ?></td>
       <td><?php echo $wine['quantity']; ?></td>
+      <td> <input type="hidden" name="Wine_ID" value="<?php echo $wine['wine_id']; ?>" /></td>
+      <td><input type='text' name="quantity" size="2"></td>
       <td><input type='submit' name="Edit" value='edit'></td>
-      <td><input type='text' name="quantity" value=1 size="2"></td>
       <td><input type='submit' name="Delete" value='delete'></td></td>
       <td><?php echo "$".$wine['price_btl']; ?></td>
       <td><?php echo "$".$wine['price_btl']*$quan; ?></td>

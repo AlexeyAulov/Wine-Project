@@ -42,3 +42,13 @@ color:  #5bc0de !important;
 {
   text-align:center;
 }
+.form-fix
+{
+  width:250px;
+  text-align:center;
+}
+
+.carousel-item
+{
+  height:100vh;
+}

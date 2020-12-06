@@ -16,7 +16,6 @@
   <body>
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="../All_Pages/HM.php">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -38,8 +37,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
+          <a class="dropdown-item" href="../All_Pages/CI.php">Update Information</a>
           <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="../All_Pages/Signin.php">Sign In</a>
+          <a class="dropdown-item" href="../All_Pages/Signin.php">Sign In</a>
           <a class="dropdown-item" href="Controller/SignOut.inc.php">Sign out</a>
         </div>
       </li>
@@ -63,7 +63,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../Pic/AA.jpg" class="d-block w-100" alt="...">
+      <img src="../Pic/AA.jpg" class="d-block w-100 " alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Alexey Aulov</h5>
         <p>Alexey Aulov is a current student at CUNY College of Staten Island, and is majoring in Information
@@ -71,17 +71,19 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../Pic/winecup.jpg" class="d-block w-100" alt="...">
+      <img src="../Pic/ET.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h5>Christopher Upton</h5>
+        <p>Christopher Upton is an upcoming computer science major at CUNY College of Staten Island and is aspiring to be a tech support/ 
+          cyber security employee after college</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../Pic/CU.jpg" class="d-block w-100" alt="...">
+      <img src="../Pic/CU.jpg" class="d-block w-100 " alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <h5>Evgeniya Titkova</h5>
+        <p>Evgeniya Titkova is a current student at CUNY College and is majoring in Computer Science
+        </p>
       </div>
     </div>
   </div>

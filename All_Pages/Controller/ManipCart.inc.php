@@ -21,20 +21,36 @@ $records=$result['R'];
 
 
 
-if(isset($_POST['Edit']))
+if(!isset($_POST['Edit']))
 {
+    echo"I am so hansome";
+    
+}
+else
+{    
     if($records>0)
     {
+    /*$updatequery="UPDATE orders SET quantity = ? WHERE user_id = ? AND wine_id = ?";
+    $stmt=$conn->prepare($updatequery);
+    $stmt->bind_param("iii",$quan,$_SESSION['id'],$Wine_ID);
+    $stmt->execute(); */
+    
     $editquery="UPDATE orders SET quantity = ? WHERE user_id = ? AND wine_id = ?";
     $stmt=$conn->prepare($editquery);
     $stmt->bind_param("iii",$quan,$_SESSION['id'],$Wine_ID);
     $stmt->execute();  
     }
-   
+}  
 
+if(!isset($_POST['Delete']))
+{
+    echo"I am so hansome and beautiful";
+    
 }
-if(isset($_POST['Delete'])){
-    if($records>0) {
+else
+{    
+    if($records>0) 
+    {
         $deletequery="DELETE FROM orders WHERE user_id=? AND wine_id=? ";
         $stmt=$conn->prepare($deletequery);
         $stmt->bind_param("ii",$_SESSION['id'],$Wine_ID);

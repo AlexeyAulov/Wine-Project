@@ -17,7 +17,6 @@
   <body>
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="../All_Pages/HM.php">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -38,6 +37,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
+          <a class="dropdown-item" href="../All_Pages/CI.php">View Information</a>
           <div class="dropdown-divider"></div>
 		  <a class="dropdown-item" href="../All_Pages/Signin.php">Sign In</a>
           <a class="dropdown-item" href="Controller/SignOut.inc.php">Sign out</a>
@@ -46,10 +46,7 @@
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-    </form>
+   
   </div>
 </nav>
   

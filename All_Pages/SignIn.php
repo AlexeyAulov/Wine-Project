@@ -16,7 +16,7 @@ include("Controller/SignIn.inc.php");
   <body>
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="../All_Pages/HM.php">Home</a>
+  <!--<a class="navbar-brand" href="../All_Pages/HM.php">Home</a>-->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,12 +31,17 @@ include("Controller/SignIn.inc.php");
 	  <li class="nav-item ">
         <a class="nav-link" href="../All_Pages/AU.php">About us <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="../All_Pages/LISU.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="../All_Pages/CI.php">Update Information</a>
+          <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
+        </div>
+      </li>
       
       </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
   
@@ -44,14 +49,15 @@ include("Controller/SignIn.inc.php");
 
       
 <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST" class="main-form needs-validation">
-              <div class="form-group">
+              <br>
+              <div class="row justify-content-center">
+              <div class="form-group text-center">
               <label for="Username">Type Username (Email)</label>
-              <input type="email" name="Name" id="Username" class="form-control" value=<?php echo $username??""; ?>>
-              <div class="form-group">
+              <div class="form-group text-center">
+              <input type="email" name="Name" id="Username" class="form-control form-fix"  value=<?php echo $username??""; ?>>
               <label for="password">Type Password</label>
-              <input type="password" name="Pswd" id="Password" class="form-control" value=<?php echo $password??""; ?>>
-             
-      
+              <input type="password" name="Pswd" id="Password" class="form-control form-fix"  value=<?php echo $password??""; ?>>
+              </div>
                    <!--ONE BEG-->
           <?php
              if(isset($errors['Name'])): 
@@ -109,6 +115,10 @@ include("Controller/SignIn.inc.php");
             <br>   
           
                   <button type="submit" name="submit" class="btn btn-primary" >Submit</button>
+                 
+            <br>
+            <p class="text-center">Not a member? Sign Up><a href="../All_Pages/SignUp.php"><br>Sign Up</a></p>
+
 </form>
   
               

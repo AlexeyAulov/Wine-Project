@@ -37,18 +37,12 @@ include("Controller/Signup.inc.php");
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
-          <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="../All_Pages/SignIn.php">Sign in</a>
-          <a class="dropdown-item" href="#">Sign out</a>
+        <a class="dropdown-item" href="../All_Pages/SignIn.php">Sign in</a>
+      
         </div>
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
   
@@ -58,16 +52,18 @@ include("Controller/Signup.inc.php");
 <body>
       
 <form  method="POST" class="main-form needs-validation">
-              <div class="form-group">
+              <br>
+              <div class="row justify-content-center">
+              <div class="form-group text-center">
               <label for="Username">Create Username (Email)</label>
-              <input type="email" name="Name" id="Username" class="form-control" value=<?php echo $username??""; ?>>
-              <div class="form-group">
+              <input type="email" name="Name" id="Username" class="form-control form-fix" value=<?php echo $username??""; ?>>
+              <div class="form-group text-center">
               <label for="password">Create Password</label>
-              <input type="password" name="Pswd" id="Password" class="form-control" value=<?php echo $password??""; ?>>
+              <input type="password" name="Pswd" id="Password" class="form-control form-fix " value=<?php echo $password??""; ?>>
               <!--Preg Match to see if it is good-->
               <label for="password">Retype Password</label>
-              <input type="password" name="Pswd2" id="Password" class="form-control" value=<?php echo $password??""; ?>>
-              
+              <input type="password" name="Pswd2" id="Password" class="form-control form-fix " value=<?php echo $password??""; ?>>
+              </div>
             
                  <!--ONE BEG-->
                  <?php
@@ -121,7 +117,8 @@ include("Controller/Signup.inc.php");
             <br>   
           
                   <button type="submit" name="SignUpButton" class="btn btn-primary" >Submit</button>
-<p class="text-center">Already a member><a href="../All_Pages/SignIn.php"><br>Sign In</a></p>
+                  <br>
+                  <p class="text-center">Already a member><a href="../All_Pages/SignIn.php"><br>Sign In</a></p>
 </form>
 
 

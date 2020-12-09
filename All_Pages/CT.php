@@ -32,7 +32,7 @@
         <a class="nav-link" href="../All_Pages/AU.php">About us <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="../All_Pages/LISU.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href=".." id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -109,8 +109,9 @@
 
 
 </table>
+<div class="justify-content-center form-fix">
 <a href="../All_Pages/CI.php" class="btn btn-outline-info">Checkout</a>
-   <br>
+</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

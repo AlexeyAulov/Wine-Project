@@ -47,8 +47,6 @@ if($records === 0)
 elseif($records>0)
 {
  
-
-
     $updatequery="UPDATE orders SET quantity = ? WHERE user_id = ? AND wine_id = ?";
     $stmt=$conn->prepare($updatequery);
     $stmt->bind_param("iii",$quan,$_SESSION['id'],$Wine_ID);

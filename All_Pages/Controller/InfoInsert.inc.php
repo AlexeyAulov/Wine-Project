@@ -26,7 +26,7 @@
             $ZipCode=$_POST['Zip_Code'];
             $Country=$_POST['Country'];
             $Phone=$_POST['Phone_Number'];
-          //  $Terms=$_POST['Term'];
+          
             /*
             if(empty($First_Name))
             {
@@ -79,11 +79,11 @@
               // UPDATE `customer` SET `id`=[value-1],`first_name`=[value-2],`last_name`=[value-3],`state`=[value-4],`zip`=[value-5],`country`=[value-6],`email`=[value-7],`phone`=[value-8],`password`=[value-9],`created_at`=[value-10],`updated_at`=[value-11] WHERE 1
                
                
-                
+    
                 $Usql="UPDATE  customer SET first_name=?, last_name=?, City=?, state=?, zip=?, country=?,phone=? WHERE id=? LIMIT 1 ";
                 $stmt= $conn->prepare($Usql);
                 $stmt->bind_param("ssssisii",$First_Name,$Last_Name,$City,$State,$ZipCode,$Country,$Phone,$user_id);
-               var_dump($_SESSION);
+               //var_dump($_SESSION);
                
                
                if($stmt->execute())
@@ -109,14 +109,5 @@
 
 //CREATE INSERT FOR EVERYTHING ELSE IN CHECKOUT
 //CHECK IF INSERT WORKS
-
-    
-    
-    
-
-
-
-
-
 
 ?>

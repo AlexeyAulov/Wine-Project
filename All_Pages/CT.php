@@ -1,6 +1,5 @@
 <?php 
  include("Controller\ManipCart.inc.php");
- var_dump($cart);
 ?>
 <!doctype html>
 <html lang="en">
@@ -12,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link  rel="stylesheet" href="../CSS/Cool.css">
-    <title>Home!</title>
+    <title>Wine project</title>
   </head>
   <body>
   <header>
@@ -20,42 +19,34 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
         <a class="nav-link" href="../All_Pages/CG.php">Catalog <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../All_Pages/CT.php">Cart</a>
+        <a class="nav-link" href="../All_Pages/CT.php">Cart<span class="sr-only">(current)</span></a>
       </li>
 	  <li class="nav-item ">
         <a class="nav-link" href="../All_Pages/AU.php">About us <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href=".." id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Account
-        </a>
+        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Account</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
-          <a class="dropdown-item" href="../All_Pages/CI.php">View Information</a>
+          <a class="dropdown-item" href="../All_Pages/CI.php">Update Information</a>
           <div class="dropdown-divider"></div>
-		  <a class="dropdown-item" href="../All_Pages/Signin.php">Sign In</a>
+          <a class="dropdown-item" href="../All_Pages/Signin.php">Sign In</a>
           <a class="dropdown-item" href="Controller/SignOut.inc.php">Sign out</a>
-        </div>
         </div>
       </li>
       
     </ul>
-   
   </div>
 </nav>
-  
   </header>
     
-	
-
-
-
 
   <table class="table table-dark">
   <thead>
@@ -101,7 +92,7 @@
     }
     else
     {
-        echo "<p>There is no records!!! </p>";
+        
         exit();
     }
   ?>  

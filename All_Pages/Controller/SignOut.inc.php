@@ -9,6 +9,7 @@ exit();
 else
 {
     $_SESSION = [];
+  
     session_destroy();
 header('Location:../CG.php');
 exit();

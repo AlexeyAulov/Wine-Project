@@ -7,9 +7,6 @@
       //submission of password and username
 
 
-   
-
-
     //because we have multiple error messages 
     if(isset($_POST['submit'])):
 

@@ -15,9 +15,9 @@ if(isset($_POST['Edit']))
     $Wine_ID = (int)$Wine_ID;
     $quan=htmlspecialchars($_POST['quantity']);
 
-    echo $quan;
+   // echo $quan;
 
-    echo $_SESSION['id']." ".$Wine_ID;
+   // echo $_SESSION['id']." ".$Wine_ID;
 
     /*$updatequery="UPDATE orders SET quantity = ? WHERE user_id = ? AND wine_id = ?";
     $stmt=$conn->prepare($updatequery);

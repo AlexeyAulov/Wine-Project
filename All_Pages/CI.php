@@ -1,8 +1,5 @@
 <?php
 include("Controller/InfoInsert.inc.php");
-var_dump($_SESSION);
-echo "<br>";
-var_dump($result);
 ?>
 <!doctype html>
 <html lang="en">

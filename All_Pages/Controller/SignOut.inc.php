@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['Name']))
+if(!isset($_SESSION['id']))
 {
     header('Location:../CG.php');  
    
@@ -11,7 +11,7 @@ else
     $_SESSION = [];
   
     session_destroy();
-header('Location:../CG.php');
+header('Location:../AU.php');
 exit();
 }
 ?>

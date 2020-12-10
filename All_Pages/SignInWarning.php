@@ -47,81 +47,22 @@ include("Controller/SignIn.inc.php");
   
   </header>
 
-      
-<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST" class="main-form needs-validation">
-              <br>
-              <div class="row justify-content-center">
-              <div class="form-group text-center">
-              <label for="Username">Type Username (Email)</label>
-              <div class="form-group text-center">
-              <input type="email" name="Name" id="Username" class="form-control form-fix"  value=<?php echo $username??""; ?>>
-              <label for="password">Type Password</label>
-              <input type="password" name="Pswd" id="Password" class="form-control form-fix"  value=<?php echo $password??""; ?>>
-              </div>
-                   <!--ONE BEG-->
-          <?php
-             if(isset($errors['Name'])): 
-            ?>        
-            <div class="alert alert-danger">
-            
-              <?php
-              echo $errors['Name'];
-              ?> 
-            
-             </div>
-            
-             <?php endif?>
-            
-              
-            
-            <!--ONE ENDING-->
-            
-             <!--TWO BEG-->
-            
-             <?php
-              if(isset($errors['Pswd'])):
-              ?>        
-             
-             <div class="alert alert-danger">
-             
-             <?php
-             
-             echo $errors['Pswd'];
-              ?>
-             
-             </div>
-              <?php 
-              endif;
-              ?>
-            
-            
-            <!--TWO END-->
-            
-            <!--THREE BEG-->
-            
-            <?php 
-            if(isset($success['Name'])):
-		        ?>
-            <div class="alert alert-success">
-             <?php
-             echo $success['Name'];
-             ?>        
-            </div>
 
-            <?php 
-            endif; 
-            ?> 
-            
-            <br>   
-          
-                  <button type="submit" name="submit" class="btn btn-outline-info " >Submit</button>
-                 
-            <br>
-            <p class="text-center">Not a member? Sign Up><a href="../All_Pages/SignUp.php"><br>Sign Up</a></p>
+  <div class="sign">
+  <br><br>
+  <h1 class="display-4 text-white text-center">Welcome!</h1>
+  <p class="lead text-white text-center">Please, Sign IN or Sign UP to checkout your cart</p>
 
-</form>
-  
-              
+  <p></p>
+ <br><br>
+  <p class="lead text-center">
+   
+    <a class="btn btn-outline-info " href="SignIn.php" role="button">Sign In</a>
+    <a class="btn btn-outline-info" href="SignUp.php" role="button">Sign Up</a>
+    
+
+</p>
+</div>
             
           
 

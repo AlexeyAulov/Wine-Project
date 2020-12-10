@@ -78,7 +78,7 @@
       <td><?php echo $wine['wine_name']; ?></td>
       <td><?php echo $wine['quantity']; ?></td>
       <td> <input type="hidden" name="Wine_ID" value="<?php echo $wine['wine_id']; ?>" /></td>
-      <td><input type='text' name="quantity" size="2"></td>
+      <td><input type='text' name="quantity" value="1" size="2"></td>
       <td><input type='submit' name="Edit" value='edit'></td>
       <td><input type='submit' name="Delete" value='delete'></td></td>
       <td><?php echo "$".$wine['price_btl']; ?></td>
@@ -101,7 +101,7 @@
 
 </table>
 <div class="justify-content-center form-fix">
-<a href="../All_Pages/CI.php" class="btn btn-outline-info">Checkout</a>
+<a href="../All_Pages/ConfirmationPage.php" class="btn btn-outline-info">Checkout</a>
 </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

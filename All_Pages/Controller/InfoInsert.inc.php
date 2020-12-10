@@ -19,15 +19,52 @@
    $errors=[];
    
    if(isset($_POST['Create_Button'])):        
-            $First_Name=$_POST['First_Name'];
-            $Last_Name=$_POST['Last_Name']; 
-            $City=$_POST['City'];
-            $State=$_POST['State'];
-            $ZipCode=$_POST['Zip_Code'];
-            $Country=$_POST['Country'];
-            $Phone=$_POST['Phone_Number'];
+        
+        $F=$_POST['First_Name'];
+        $L=$_POST['Last_Name'];   
+        $C=$_POST['City'];
+        $S=$_POST['State'];
+        $Z=$_POST['Zip_Code'];
+        $CY=$_POST['Country'];
+        $P=$_POST['Phone_Number'];
+        
+        $html_First_Name=htmlspecialchars($F);
+        $html_Last_Name=htmlspecialchars($L);
+        $html_City=htmlspecialchars($C);
+        $html_State=htmlspecialchars($S);
+        $html_Zip_Code=htmlspecialchars($Z);
+        $html_Country=htmlspecialchars($CY);
+        $html_Phone_Number=htmlspecialchars($P);
+    
+        
+        
+        
+        
+        $Slash_First_Name=stripslashes($html_First_Name);
+        $Slash_Last_Name=stripslashes($html_Last_Name);
+        $Slash_City=stripslashes($html_City);
+        $Slash_State=stripslashes($html_State);
+        $Slash_Zip_Code=stripslashes($html_Zip_Code);
+        $Slash_Country=stripslashes($html_Country);
+        $Slash_Phone_Number=stripslashes($html_Phone_Number);
+        
+        
+        $First_Name=trim($Slash_First_Name);
+        $Last_Name=trim($Slash_Last_Name);
+        $City=trim($Slash_City);
+        $State=trim($Slash_State);
+        $ZipCode=trim($Slash_Zip_Code);
+        $Country=trim($Slash_Country);
+        $Phone=trim($Slash_Phone_Number);
+    
+    
+    
+    
+    
+    
+    
           
-            /*
+            
             if(empty($First_Name))
             {
                 $errors['First_Name']="First Name Required!";
@@ -61,7 +98,7 @@
             {
                 $errors['Phone_Number']="Phone Number Required";
             }
-            */
+            
             
            /* if(empty($Terms))
             {
@@ -71,10 +108,9 @@
 
             if(count($errors)===0):
             
-                //isset($_POST('Term')):
-                
-               //Update
                
+                
+              
 
               // UPDATE `customer` SET `id`=[value-1],`first_name`=[value-2],`last_name`=[value-3],`state`=[value-4],`zip`=[value-5],`country`=[value-6],`email`=[value-7],`phone`=[value-8],`password`=[value-9],`created_at`=[value-10],`updated_at`=[value-11] WHERE 1
                
@@ -88,14 +124,9 @@
                
                if($stmt->execute())
                 {   
-                 
-
-                    //var_dump($_SESSION);
-               
-                    $_SESSION['message'] = "Congatulation on creating an account!";
-                    $_SESSION['alert-class']="alert-success";
-                
-             
+                   
+                    header("Location:../All_Pages/CG.php");  
+            
                 }
                 else
                 {

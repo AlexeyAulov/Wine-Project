@@ -116,7 +116,7 @@ include("Controller/Signup.inc.php");
             
             <br>   
           
-                  <button type="submit" name="SignUpButton" class="btn btn-primary" >Submit</button>
+                  <button type="submit" name="SignUpButton" class="btn btn-outline-info " >Submit</button>
                   <br>
                   <p class="text-center">Already a member><a href="../All_Pages/SignIn.php"><br>Sign In</a></p>
 </form>

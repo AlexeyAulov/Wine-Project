@@ -62,6 +62,7 @@
       <img src="../Pic/AA.jpg" class="d-block w-100 " alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Alexey Aulov</h5>
+        <a href="https://www.linkedin.com/in/alexey-a-6733a71b6"style="color:white">LinkedIn Account</a>
         <p>Alexey Aulov is a current student at CUNY College of Staten Island, and is majoring in Information
         Systems and Informatics. He currently is persuing in becoming a Full Stack Developer. </p>
       </div>

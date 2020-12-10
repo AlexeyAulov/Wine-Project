@@ -4,7 +4,8 @@ session_start();
 
 if(!isset($_SESSION['id']))
 {
-    echo"Check out as Guest";
+   header("Location:..\All_Pages\SignInWarning.php");
+                
 
 }    
     

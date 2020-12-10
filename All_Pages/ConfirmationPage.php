@@ -36,8 +36,7 @@ include("Controller/SignIn.inc.php");
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="../All_Pages/CI.php">Update Information</a>
-          <a class="dropdown-item" href="../All_Pages/SignUp.php">Sign up</a>
+          <a class="dropdown-item" href="Controller/SignOut.inc.php">Sign Out</a>
         </div>
       </li>
       
@@ -47,81 +46,15 @@ include("Controller/SignIn.inc.php");
   
   </header>
 
-      
-<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST" class="main-form needs-validation">
-              <br>
-              <div class="row justify-content-center">
-              <div class="form-group text-center">
-              <label for="Username">Type Username (Email)</label>
-              <div class="form-group text-center">
-              <input type="email" name="Name" id="Username" class="form-control form-fix"  value=<?php echo $username??""; ?>>
-              <label for="password">Type Password</label>
-              <input type="password" name="Pswd" id="Password" class="form-control form-fix"  value=<?php echo $password??""; ?>>
-              </div>
-                   <!--ONE BEG-->
-          <?php
-             if(isset($errors['Name'])): 
-            ?>        
-            <div class="alert alert-danger">
-            
-              <?php
-              echo $errors['Name'];
-              ?> 
-            
-             </div>
-            
-             <?php endif?>
-            
-              
-            
-            <!--ONE ENDING-->
-            
-             <!--TWO BEG-->
-            
-             <?php
-              if(isset($errors['Pswd'])):
-              ?>        
-             
-             <div class="alert alert-danger">
-             
-             <?php
-             
-             echo $errors['Pswd'];
-              ?>
-             
-             </div>
-              <?php 
-              endif;
-              ?>
-            
-            
-            <!--TWO END-->
-            
-            <!--THREE BEG-->
-            
-            <?php 
-            if(isset($success['Name'])):
-		        ?>
-            <div class="alert alert-success">
-             <?php
-             echo $success['Name'];
-             ?>        
-            </div>
 
-            <?php 
-            endif; 
-            ?> 
-            
-            <br>   
-          
-                  <button type="submit" name="submit" class="btn btn-outline-info " >Submit</button>
-                 
-            <br>
-            <p class="text-center">Not a member? Sign Up><a href="../All_Pages/SignUp.php"><br>Sign Up</a></p>
-
-</form>
+  <div class="sign">
+  <br><br>
+  <h1 class="display-4 text-white text-center">Congratulations on your order!</h1>
+ 
+ <br><br>
   
-              
+</p>
+</div>
             
           
 

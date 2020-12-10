@@ -1,5 +1,6 @@
 <?php
 include("Controller/InfoInsert.inc.php");
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -43,10 +44,7 @@ include("Controller/InfoInsert.inc.php");
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-    </form>
+  
   </div>
 </nav>
   
@@ -55,15 +53,14 @@ include("Controller/InfoInsert.inc.php");
         <br>
         <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" class="needs-validation" novalidate>
             <div class="container m-auto">
-                <h3 class="text-center text-dark ">Part 2</h3>
-                <h4 class="text-dark text-center">Enter Account Information</h4>
+                <h4 class="text-dark text-center">Enter Shipping Information</h4>
             
             
             
             <div class="form-row" >
               <div class="col-md-4 mb-3 ">
                 <label for="validationCustom01">First Name</label>
-                <input type="text"  name="First_Name" class="form-control" id="validationCustom01" value="<?php echo $result['first_name']; ?>" required>
+                <input type="text"  name="First_Name" class="form-control" id="validationCustom01" required>
                 <?php
                  if(isset($errors['First_Name'])): 
                  ?>        
@@ -193,10 +190,7 @@ include("Controller/InfoInsert.inc.php");
              
         <div class="row ml-5">
               <div class="form-check m-auto">
-                <input class="form-check-input" name="Term" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
+               
                 <?php
                  if(isset($errors['Terms'])): 
                  ?>        
@@ -215,7 +209,7 @@ include("Controller/InfoInsert.inc.php");
         
             </div>
             <div class=" text-center mt-3">
-                <button class="btn btn-primary" name="Create_Button" type="submit">Create Account</button>
+                <button class="btn btn-outline-info " name="Create_Button" type="submit">Enter</button>
                 </div>
         </div>
     </div>

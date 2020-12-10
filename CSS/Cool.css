@@ -5,6 +5,13 @@
   margin-top: 0mm;
   margin-bottom: 1mm;
 }
+
+.sign {
+  height:95vh;
+  background:url(../Pic/sign.jpg);
+  background-size: cover;
+  
+}
 .navbar-nav a{
   color: #5bc0de !important;
 }

@@ -9,9 +9,23 @@
    
    if(isset($_POST['SignUpButton'])):
      {
-         $email=$_POST['Name'];
-         $password=$_POST['Pswd'];
-         $passwordCon=$_POST['Pswd2'];
+        $e=$_POST['Name'];
+        $p=$_POST['Pswd'];
+        $pc=$_POST['Pswd2'];
+
+        
+        $html_email=htmlspecialchars($e);
+        $html_password=htmlspecialchars($p);
+        $html_passwordCon=htmlspecialchars($pc);
+        
+        $Slash_email=stripslashes($html_email);
+        $Slash_password=stripslashes($html_password);
+        $Slash_passwordCon=stripslashes($html_passwordCon);
+        
+        $email=trim($Slash_email);
+        $password=trim($Slash_password);
+        $passwordCon=trim($Slash_passwordCon);
+        
 
      }   
      if(empty($email))
@@ -61,7 +75,7 @@ if(count($errors)===0)
 
     $_SESSION['message'] = "You are logged in!";
     $_SESSION['alert-class']="alert-success";
-    header('Location:../All_Pages/CI.php');
+    header('Location:../All_Pages/SignIn.php');
     exit();
     }
     else

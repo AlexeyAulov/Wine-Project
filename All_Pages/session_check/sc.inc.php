@@ -2,6 +2,8 @@
 
 session_start();
 
+//creates the session then destroys it
+
 if(!isset($_SESSION['created']))
 {
     echo"Created at:"/time();

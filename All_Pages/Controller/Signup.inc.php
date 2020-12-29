@@ -5,7 +5,7 @@
    
    $errors=[];
    
-
+//if user submits the button, sanitize and validate
    
    if(isset($_POST['SignUpButton'])):
      {
@@ -13,7 +13,8 @@
         $p=$_POST['Pswd'];
         $pc=$_POST['Pswd2'];
 
-        
+        //sanitize
+
         $html_email=htmlspecialchars($e);
         $html_password=htmlspecialchars($p);
         $html_passwordCon=htmlspecialchars($pc);
@@ -26,7 +27,7 @@
         $password=trim($Slash_password);
         $passwordCon=trim($Slash_passwordCon);
         
-
+    //validate
      }   
      if(empty($email))
      {
@@ -45,6 +46,7 @@
         $errors['Pswd']="Password do not match";
     }
     
+//Select query to check if email already exists
 
 $emailQuery="SELECT * FROM customer WHERE email=? LIMIT 1";
 $stmt = $conn -> prepare($emailQuery);
@@ -57,6 +59,8 @@ if($userCount>0)
 {
 $errors['email']="Email already exists";
 }
+
+// if error equal to 0 insert into new data into the row of customer table of database wine, else display error message
 
 if(count($errors)===0)
 {

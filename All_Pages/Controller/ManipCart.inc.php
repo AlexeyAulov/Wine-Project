@@ -2,6 +2,8 @@
 include_once 'Includes/dbconnect.inc.php';
 session_start();
 
+//if session not created redirect user to signinwarning
+
 if(!isset($_SESSION['id']))
 {
    header("Location:..\All_Pages\SignInWarning.php");
@@ -9,6 +11,8 @@ if(!isset($_SESSION['id']))
 
 }    
     
+//if user does edit, then use update query
+
 if(isset($_POST['Edit']))
 {    
 
@@ -16,14 +20,7 @@ if(isset($_POST['Edit']))
     $Wine_ID = (int)$Wine_ID;
     $quan=htmlspecialchars($_POST['quantity']);
 
-   // echo $quan;
-
-   // echo $_SESSION['id']." ".$Wine_ID;
-
-    /*$updatequery="UPDATE orders SET quantity = ? WHERE user_id = ? AND wine_id = ?";
-    $stmt=$conn->prepare($updatequery);
-    $stmt->bind_param("iii",$quan,$_SESSION['id'],$Wine_ID);
-    $stmt->execute(); */
+  
     
     $editquery="UPDATE orders SET quantity = ? WHERE user_id = ? AND wine_id = ?";
     $stmt=$conn->prepare($editquery);
@@ -32,6 +29,9 @@ if(isset($_POST['Edit']))
     
     
 }  
+
+
+//if user does delete, then delete query
 
 if(isset($_POST['Delete']))
 {    
@@ -43,6 +43,8 @@ if(isset($_POST['Delete']))
     $stmt->bind_param("ii",$_SESSION['id'],$Wine_ID);
     $stmt->execute();
 }
+
+//join query to store information from two tables
 
 
 $cart_query = "SELECT w.wine_id, w.wine_name, w.price_btl, o.quantity FROM orders o ";

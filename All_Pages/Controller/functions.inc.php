@@ -1,6 +1,7 @@
 <?php
 	
-
+	//connect images to wine id
+	
 	function get_product_once($conn, $Wine_ID){
 		$query = "SELECT image FROM wines WHERE wine_id = ? LIMIT 1";
 

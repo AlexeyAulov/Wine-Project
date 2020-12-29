@@ -11,7 +11,6 @@
    $stmt->execute();
    $result = $stmt->get_result()->fetch_assoc();
 
-   //var_dump($result);
    
    
    
@@ -20,6 +19,9 @@
    
    if(isset($_POST['Create_Button'])):        
         
+
+        //sanitation process
+
         $F=$_POST['First_Name'];
         $L=$_POST['Last_Name'];   
         $C=$_POST['City'];
@@ -60,7 +62,7 @@
     
     
     
-    
+        //validation process 
     
     
           
@@ -106,22 +108,20 @@
             }*/
             
 
+            //updates the customer info if validation errors are equal to 0
+
             if(count($errors)===0):
             
-               
-                
-              
-
-              // UPDATE `customer` SET `id`=[value-1],`first_name`=[value-2],`last_name`=[value-3],`state`=[value-4],`zip`=[value-5],`country`=[value-6],`email`=[value-7],`phone`=[value-8],`password`=[value-9],`created_at`=[value-10],`updated_at`=[value-11] WHERE 1
-               
-               
+                 
     
                 $Usql="UPDATE  customer SET first_name=?, last_name=?, City=?, state=?, zip=?, country=?,phone=? WHERE id=? LIMIT 1 ";
                 $stmt= $conn->prepare($Usql);
                 $stmt->bind_param("ssssisii",$First_Name,$Last_Name,$City,$State,$ZipCode,$Country,$Phone,$user_id);
                //var_dump($_SESSION);
                
-               
+               //if updated redirect customer to catalog page
+               //store error message to array
+
                if($stmt->execute())
                 {   
                    

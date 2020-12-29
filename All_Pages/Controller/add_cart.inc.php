@@ -35,6 +35,9 @@ $stmt->execute();
 $result = $stmt->get_result()->fetch_assoc();
 $records=$result['R'];
 
+//if it is empty then insert the wine type and the amount to the orders table
+//else if there is quantity amount > update the amount to the value set
+
 if($records === 0)
 {
     $insertquery="INSERT INTO orders(user_id, quantity,wine_id)";
@@ -53,6 +56,8 @@ elseif($records>0)
     $stmt->execute(); 
     
 }
+
+//resultorder stores everything from the record of the database table 
 
 $orderquery= "SELECT *";
 $orderquery .= " FROM orders";

@@ -43,6 +43,9 @@
             $errors['Pswd'] = 'Invalid Password';
           
           }
+
+          //if no errors start validating the username and password with the help of select query and comparing it to users input
+
           if(empty($errors)):
                  
               //Select 1 customer where email and password that might match db
@@ -56,7 +59,8 @@
               $stmt->execute();
               $result=$stmt->get_result();
               
-              
+              //if failed display errors message, else make the session start of that user id
+
               if( $result->num_rows===0) 
               {
               $errors['Name'] = 'No matched record!';
@@ -78,12 +82,5 @@
     endif; 
    
    
-  ?>
+?>
   
-  <?php//  session_start();
-                    // $_SESSION['Name']= $email;
-
-                   //  var_dump($_SESSION);
-                    
-                   //  header("Location:../All_Pages/CG.php");
-        ?>           

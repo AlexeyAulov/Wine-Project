@@ -51,7 +51,7 @@ include("Controller/SignIn.inc.php");
   <div class="sign">
   <br><br>
   <h1 class="display-4 text-white text-center">Welcome!</h1>
-  <p class="lead text-white text-center">Please, Sign IN or Sign UP to checkout your cart</p>
+  <p class="lead text-white text-center">Please, Sign IN or Sign UP to add or checkout your cart</p>
 
   <p></p>
  <br><br>

@@ -3,7 +3,7 @@
  include_once "Includes/dbconnect.inc.php";
  //include_once "Controller\add_cart.inc.php";
    
- $pagerows=2;
+ $pagerows=3;
    if ((isset($_GET['page'])&& is_numeric($_GET['page']))){
        $current_page=htmlspecialchars($_GET['page']);
    }else{

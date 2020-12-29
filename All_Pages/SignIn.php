@@ -14,6 +14,8 @@ include("Controller/SignIn.inc.php");
     <title>Home!</title>
   </head>
   <body>
+  <!--Navbar with drop-menu-->
+
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <!--<a class="navbar-brand" href="../All_Pages/HM.php">Home</a>-->
@@ -47,7 +49,8 @@ include("Controller/SignIn.inc.php");
   
   </header>
 
-      
+<!--post form with input and submition-->
+
 <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST" class="main-form needs-validation">
               <br>
               <div class="row justify-content-center">
@@ -111,12 +114,14 @@ include("Controller/SignIn.inc.php");
             <?php 
             endif; 
             ?> 
-            
+            <!--THREE END-->
             <br>   
           
                   <button type="submit" name="submit" class="btn btn-outline-info " >Submit</button>
                  
             <br>
+           
+           <!--sign up button-->
             <p class="text-center">Not a member? Sign Up><a href="../All_Pages/SignUp.php"><br>Sign Up</a></p>
 
 </form>

@@ -14,6 +14,7 @@ include("Controller/Signup.inc.php");
     <title>Home!</title>
   </head>
   <body>
+  <!--Navbar with dropdown menu-->
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   
@@ -50,7 +51,9 @@ include("Controller/Signup.inc.php");
 
 
 <body>
-      
+
+<!--Post form-->
+
 <form  method="POST" class="main-form needs-validation">
               <br>
               <div class="row justify-content-center">

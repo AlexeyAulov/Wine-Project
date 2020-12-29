@@ -16,6 +16,8 @@ include("Controller/InfoInsert.inc.php");
     <title>Checkout Page</title>
   </head>
   <body>
+  <!--Navbar with dropdown-->
+
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -49,13 +51,14 @@ include("Controller/InfoInsert.inc.php");
 </nav>
   
   </header>
-          
+         <!--post form with security precautions--> 
         <br>
         <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" class="needs-validation" novalidate>
             <div class="container m-auto">
                 <h4 class="text-dark text-center">Enter Shipping Information</h4>
             
-            
+            <!--each div class represents there own column within a row. If infomation is missing from databse it will 
+            echo out the missing information when user hits submit button, also shows what was previously there if there is one -->
             
             <div class="form-row" >
               <div class="col-md-4 mb-3 ">

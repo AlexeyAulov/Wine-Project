@@ -14,6 +14,10 @@
     <title>Home!</title>
   </head>
   <body>
+ 
+ 
+ <!--Navbar with drop down-->
+  
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,6 +54,7 @@
 </nav>
   
   </header>
+  <!--3 part Carousel-->
 
    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -57,12 +62,14 @@
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
   </ol>
+ 
+ <!--representation of contents inside of carousel-->
+
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="../Pic/AA.jpg" class="d-block w-100 " alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Alexey Aulov</h5>
-        <a href="https://www.linkedin.com/in/alexey-a-6733a71b6"style="color:white">LinkedIn Account</a>
         <p>Alexey Aulov is a current student at CUNY College of Staten Island, and is majoring in Information
         Systems and Informatics. He currently is persuing in becoming a Full Stack Developer. </p>
       </div>
@@ -84,6 +91,9 @@
       </div>
     </div>
   </div>
+  
+  <!--previous and next button for carousel-->
+  
   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>

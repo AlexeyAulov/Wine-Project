@@ -14,6 +14,9 @@
     <title>Wine project</title>
   </head>
   <body>
+  
+  <!--Navbar with Dropdown-->
+
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +50,8 @@
 </nav>
   </header>
     
-
+<!--Table header that displays wine, quantity,price, sub-total-->
+  
   <table class="table table-dark">
   <thead>
     <tr>
@@ -64,6 +68,7 @@
   </thead>
   
   
+  <!--Cart page displays everything from orders table of database wine, if not then void-->
   <?php
     if ($cart){
   ?>    

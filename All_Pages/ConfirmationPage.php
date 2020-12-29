@@ -14,9 +14,9 @@ include("Controller/SignIn.inc.php");
     <title>Home!</title>
   </head>
   <body>
+  <!--Navbar with dropdown menu-->
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <!--<a class="navbar-brand" href="../All_Pages/HM.php">Home</a>-->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -43,6 +43,8 @@ include("Controller/SignIn.inc.php");
       </ul>
   </div>
 </nav>
+  
+  <!--confirmation that order is in the database-->
   
   </header>
 

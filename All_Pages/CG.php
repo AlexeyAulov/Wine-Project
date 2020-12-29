@@ -15,6 +15,8 @@ include("Controller\Catalog.inc.php");
   </head>
   <body>
   <header>
+  
+  <!--NavBar with drop down -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -47,10 +49,11 @@ include("Controller\Catalog.inc.php");
   </div>
 </nav>
   
+  <!--Title Header-->
   </header>
     <br>
-
-    <!--<h2><a href="shopping_cart.php" target="_blank"> Shopping Cart </a></h2>-->
+<!--loop to display items from database-->
+  
   <?php
     if ($result){
   ?>    
@@ -58,10 +61,14 @@ include("Controller\Catalog.inc.php");
         <?php 
       foreach($result as $k => $wine){
     ?>
-          <div class="card">  
+    
+          <div class="card ">  
           <img src="../Pic/<?php echo $wine['image']; ?>" alt="wine_name" style="width: 100%">
           <h1><?php echo $wine['wine_name']; ?></h1>
           <p class="price">$<?php echo $wine['price_btl'];?></p>
+  
+          <!--get form for product to add to cart-->
+
           <form action="Controller/add_cart.inc.php" method="GET">
             <input type='text' name="quantity" value=1 size="2">
             <input type="hidden" name="Wine_ID" value="<?php echo $wine['wine_id']; ?>" />
@@ -75,6 +82,9 @@ include("Controller\Catalog.inc.php");
     ?>
 <?php
 }
+
+//Precautionary measure to check the database
+
 else
 {
     echo "<p>There is no records!!! </p>";
@@ -84,6 +94,8 @@ else
 ?>
 <br>
 <br>
+
+<!--pagination and button-->
 
 <footer class="footer">
     <?php
